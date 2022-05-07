@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #e35869;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 6.5rem;
+}
+
+.form {
+    width: 50rem;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+
+.content {
+    padding: 3.5rem 3.5rem 0;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    margin-top: 3rem;
+    border: 0;
+    border-bottom: 1px solid #747474;
+    outline: none;
+    font-size: 1.6rem;
+    padding: 1rem 0.1rem;
+    font-family: 'Rubik', sans-serif;
+    transition: all 0.1s;
+}
+
+.form__input:focus {
+    border-bottom: 1px solid #000;
+}
+
+.form__input::placeholder {
+    text-transform: uppercase;
+}
+
+.form__forget-password {
+    display: block;
+    margin: 3rem;
+    text-align: center;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #747474;
+    letter-spacing: 0.2px;
+}
+
+
+.form__header {
+    margin-top: 0;
+    font-size: 3.2rem;
+    font-weight: 300;
+    margin-bottom: 4.5rem;
+}
+
+.form__footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5.1rem;
+}
+
+
+.btn {
+    border: 0;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 0.02px;
+    transition: all 0.2s;
+}
+
+.form__register {
+    cursor: pointer;
+    color: #777;
+    background: #e8e9ec;
+}
+
+
+.form__register:hover {
+    background: #d8d8d8;
+}
+
+.form__sign-in {
+    background: #2d3b55;
+    color: #fff;
+}
+
+.form__sign-in:hover {
+    background: #3c4d6d;;
+}
