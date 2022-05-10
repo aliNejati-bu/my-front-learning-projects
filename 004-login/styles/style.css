@@ -1,0 +1,120 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+
+body {
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    font-size: 1.6rem;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forms-boxes {
+    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+    box-shadow: 5px 20px 50px #000;
+    height: 50rem;
+    width: 35rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.boxes__header {
+    text-align: center;
+    margin: 6rem 0;
+    font-size: 3.68rem;
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+}
+
+.boxes__sign-up{
+    transition: 0.8s ease-in-out;
+}
+
+.boxes__sign-up .boxes__header {
+    color: #fff;
+}
+
+.forms-boxes form {
+    text-align: center;
+}
+
+.form-input {
+    display: block;
+    margin: 2rem auto;
+    width: 23rem;
+    height: 4rem;
+    outline: 0;
+    padding: 0 1rem;
+    border-radius: 5px;
+    background: #e0dede;
+    border: 0;
+}
+
+
+.btn {
+    height: 4rem;
+    width: 21rem;
+    background: #573b8a;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.btn:hover {
+    background: #6d44b8;
+}
+
+.boxes__sign-in{
+    background: #fff;
+    border-radius: 60% / 10%;
+    height: 50rem;
+    transform: translateY(-4%);
+    transition: 0.8s ease-in-out;
+}
+
+.boxes__sign-in .boxes__header{
+    color: #573b8a;
+    transform: scale(.6);
+}
+
+#temp{
+    display: none;
+}
+
+#temp:checked ~ .boxes__sign-in{
+    transform: translateY(-65%);
+}
+#temp:checked ~ .boxes__sign-in .boxes__header{
+    transform: scale(1);
+}
+
+#temp:checked ~ .boxes__sign-up .boxes__header{
+    transform: scale(.6);
+}
+

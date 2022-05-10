@@ -7,19 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .cicle{
-            transition: height  0.3s;
+        *{
+            box-sizing: border-box;
         }
-        .ch:checked ~ .cicle {
+
+        .cicle{
+            width: 10rem;
+            height: 10rem;
             background: red;
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
+            padding: 1rem;
+        }
+
+        .test:checked ~ .cicle{
+            background: black;
         }
     </style>
 </head>
 <body>
-<input type="checkbox" class="ch">
-<div class="cicle"></div>
+<div>
+    <input type="checkbox" class="test">
+
+</div>
+<div class="cicle">
+
+</div>
 </body>
 </html>
