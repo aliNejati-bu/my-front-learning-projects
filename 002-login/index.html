@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/19f4c6bb9d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+<input type="checkbox" id="helper_register">
 <div class="container">
     <form action="" class="form">
         <div class="form__input-group">
@@ -28,7 +28,34 @@
         </div>
         <button class="form__btn">sign in</button>
         <div class="form__sign-up">
-            Not a member? <a href="#" class="form__sign-up-link">Sign up now</a>
+            Not a member? <label for="helper_register" class="form__sign-up-link">Sign up now</label>
+        </div>
+    </form>
+</div>
+
+<div class="container-imagine">
+    <form action="" class="form">
+        <div class="form__input-group">
+            <div class="form__icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <input type="text" class="form__input" placeholder="Username">
+        </div>
+        <div class="form__input-group">
+            <div class="form__icon">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <input type="password" class="form__input" placeholder="Password">
+        </div>
+        <div class="form__input-group">
+            <div class="form__icon">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <input type="password" class="form__input" placeholder="Confirm Password">
+        </div>
+        <button class="form__btn">Sign up</button>
+        <div class="form__sign-up">
+            Are you Member? <label for="helper_register" class="form__sign-up-link">Sign in now</label>
         </div>
     </form>
 </div>
