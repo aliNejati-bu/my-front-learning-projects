@@ -7,29 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        *{
-            box-sizing: border-box;
-        }
-
-        .cicle{
-            width: 10rem;
+        .cont {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             height: 10rem;
-            background: red;
-            padding: 1rem;
-        }
-
-        .test:checked ~ .cicle{
-            background: black;
         }
     </style>
 </head>
 <body>
-<div>
-    <input type="checkbox" class="test">
 
+<div class="cont">
+    <div style="background: red;display: inline-block">Lorem</div>
+    <div style="background: blue">b</div>
+    <div style="background: gold">c</div>
 </div>
-<div class="cicle">
 
-</div>
 </body>
 </html>

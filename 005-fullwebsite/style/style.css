@@ -1,0 +1,63 @@
+@import url("fonts/font.css");
+
+html{
+    font-size: 62.5%;
+}
+
+:root {
+    --color-secondary: #17a2b8;
+    --colo-primary: #007bff;
+    --color-accent: #736dd5;
+    --color-white: #fff;
+}
+
+*, *::after, *::before {
+    font-family: vazir-med-fa, serif;
+}
+
+body {
+    text-align: right;
+    direction: rtl;
+    font-size: 1.6rem;
+}
+
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+
+/* Badges */
+
+.badge{
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+
+.badge--primary{
+    background: var(--colo-primary);
+    color: var(--color-white);
+
+}
+
+.badge--secondary{
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.badge--accent{
+    background: var(--color-accent);
+    color: var(--color-white);
+    vertical-align: center;
+}
+
