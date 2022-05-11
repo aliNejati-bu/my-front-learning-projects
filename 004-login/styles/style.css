@@ -44,11 +44,11 @@ body {
     font-weight: bold;
     display: block;
     cursor: pointer;
-    transition: 0.8s ease-in-out;
+    transition: 0.4s cubic-bezier(.79,-0.99,0,2);
 }
 
 .boxes__sign-up{
-    transition: 0.8s ease-in-out;
+    transition: 0.8s cubic-bezier(1,-0.13,.52,.79);
 }
 
 .boxes__sign-up .boxes__header {
@@ -95,7 +95,7 @@ body {
     border-radius: 60% / 10%;
     height: 50rem;
     transform: translateY(-4%);
-    transition: 0.8s ease-in-out;
+    transition: 0.8s cubic-bezier(1,-0.13,.52,.79);
 }
 
 .boxes__sign-in .boxes__header{
