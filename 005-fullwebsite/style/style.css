@@ -1,6 +1,6 @@
 @import url("fonts/font.css");
 
-* ,*::after,*::before{
+*, *::after, *::before {
     box-sizing: border-box;
 }
 
@@ -10,7 +10,9 @@ html {
 
 :root {
     --color-secondary: #17a2b8;
+    --color-secondary-darker: #138496;
     --colo-primary: #007bff;
+    --color-primary-darker: #0069d9;
     --color-accent: #736dd5;
     --color-white: #fff;
     --color-purple: #736dd5;
@@ -74,8 +76,8 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin: 3rem;
     padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 1px 5px 20px 2px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,17 +93,91 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--color-purple);
 }
 
-.our-box__image{
+.our-box__image {
     margin-bottom: 1.5rem;
     width: 6rem;
 }
 
-.our-box__link{
+.our-box__link {
     color: white;
     text-decoration: none;
 }
 
 
-.our-box--green{
+.our-box--green {
     background: var(--color-green);
 }
+
+/* Buttons */
+.btn {
+    border: 0;
+    padding: 1rem 1.2rem;
+    display: inline-block;
+    text-decoration: none;
+    margin: 1rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: 0.15s ease-in-out;
+    --local-border-size: 1px;
+}
+
+
+.btn--primary {
+    background: var(--colo-primary);
+    --local-background: var(--colo-primary);
+    color: var(--color-white);
+}
+
+
+.btn--primary:hover {
+    background-color: var(--color-primary-darker);
+    color: var(--color-white);
+}
+
+.btn--secondary {
+    background: var(--color-secondary);
+    --local-background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn--secondary:hover{
+    background: var(--color-secondary-darker);
+}
+
+
+
+.btn--gradient{
+    background: linear-gradient(40deg,#45cafc,#303f9f);
+    --local-background: linear-gradient(40deg,#45cafc,#303f9f);
+    color: white;
+}
+
+
+.btn--no-radius{
+    border-radius: 0;
+}
+
+.btn--big{
+    padding: 1.6rem 2.4rem;
+    border: 2px solid var(--local-background);
+    --local-border-size: 2px;
+    font-size: 1.6rem;
+}
+
+.btn--outline{
+    border: var(--local-border-size) solid var(--local-background);
+    color: var(--local-background);
+    background: var(--color-white);
+}
+
+.btn--outline:hover{
+    border: var(--local-border-size) solid var(--local-background);
+    color: var(--color-white);
+    background: var(--local-background);
+}
+
+
+
+
+
