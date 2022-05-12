@@ -1,6 +1,10 @@
 @import url("fonts/font.css");
 
-html{
+* ,*::after,*::before{
+    box-sizing: border-box;
+}
+
+html {
     font-size: 62.5%;
 }
 
@@ -9,11 +13,14 @@ html{
     --colo-primary: #007bff;
     --color-accent: #736dd5;
     --color-white: #fff;
+    --color-purple: #736dd5;
+    --color-green: #34fe9b;
 }
 
 *, *::after, *::before {
     font-family: vazir-med-fa, serif;
 }
+
 
 body {
     text-align: right;
@@ -33,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Badges */
 
-.badge{
+.badge {
     display: inline-block;
     padding: 0.2rem 0.6rem;
     border-radius: 1rem;
@@ -44,20 +51,57 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.badge--primary{
+.badge--primary {
     background: var(--colo-primary);
     color: var(--color-white);
 
 }
 
-.badge--secondary{
+.badge--secondary {
     background: var(--color-secondary);
     color: var(--color-white);
 }
 
-.badge--accent{
+.badge--accent {
     background: var(--color-accent);
     color: var(--color-white);
     vertical-align: center;
 }
 
+/* Our Boxes */
+
+.our-box {
+    text-align: center;
+    margin: 3rem;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 5px 20px 2px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-box--primary {
+    background: var(--colo-primary);
+}
+
+
+.our-box--purple {
+    background: var(--color-purple);
+}
+
+.our-box__image{
+    margin-bottom: 1.5rem;
+    width: 6rem;
+}
+
+.our-box__link{
+    color: white;
+    text-decoration: none;
+}
+
+
+.our-box--green{
+    background: var(--color-green);
+}
