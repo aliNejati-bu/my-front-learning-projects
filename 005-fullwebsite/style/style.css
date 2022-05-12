@@ -17,6 +17,7 @@ html {
     --color-white: #fff;
     --color-purple: #736dd5;
     --color-green: #34fe9b;
+    --color--input-border: #ced4da
 }
 
 *, *::after, *::before {
@@ -141,43 +142,67 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-white);
 }
 
-.btn--secondary:hover{
+.btn--secondary:hover {
     background: var(--color-secondary-darker);
 }
 
 
-
-.btn--gradient{
-    background: linear-gradient(40deg,#45cafc,#303f9f);
-    --local-background: linear-gradient(40deg,#45cafc,#303f9f);
+.btn--gradient {
+    background: linear-gradient(40deg, #45cafc, #303f9f);
+    --local-background: linear-gradient(40deg, #45cafc, #303f9f);
     color: white;
 }
 
 
-.btn--no-radius{
+.btn--no-radius {
     border-radius: 0;
 }
 
-.btn--big{
+.btn--big {
     padding: 1.6rem 2.4rem;
     border: 2px solid var(--local-background);
     --local-border-size: 2px;
     font-size: 1.6rem;
 }
 
-.btn--outline{
+.btn--outline {
     border: var(--local-border-size) solid var(--local-background);
     color: var(--local-background);
     background: var(--color-white);
 }
 
-.btn--outline:hover{
+.btn--outline:hover {
     border: var(--local-border-size) solid var(--local-background);
     color: var(--color-white);
     background: var(--local-background);
 }
 
 
+/* input boxes */
+
+.input-box-with-btn {
+    display: flex;
+    border: 1px solid var(--color--input-border);
+    border-radius: 50rem;
+    overflow: hidden;
+}
+
+.input-box-with-btn .btn {
+    margin: 0;
+}
+
+.input-box-with-btn input {
+    border: 0;
+    outline: 0;
+    flex-grow: 1;
+    padding-right: 1rem;
+}
+
+.input-box-with-btn input::placeholder {
+    font-size: 1.2rem;
+    font-weight: 400;
+
+}
 
 
 
