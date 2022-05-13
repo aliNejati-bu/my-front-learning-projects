@@ -17,15 +17,19 @@ html {
     --color-white: #fff;
     --color-purple: #736dd5;
     --color-green: #34fe9b;
-    --color--input-border: #ced4da
+    --color--input-border: #ced4da;
+    --color-body: rgb(33, 37, 41);
+    --color-green-darker: #28a745;
+    --color-gray: #6c757d;
 }
 
-*, *::after, *::before {
+* {
     font-family: vazir-med-fa, serif;
 }
 
 
 body {
+    color: var(--color-body);
     text-align: right;
     direction: rtl;
     font-size: 1.6rem;
@@ -45,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .badge {
     display: inline-block;
-    padding: 0.2rem 0.6rem;
+    padding: 0.3rem 0.6rem;
     border-radius: 1rem;
     font-size: 1.2rem;
     font-weight: 700;
@@ -69,6 +73,11 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--color-accent);
     color: var(--color-white);
     vertical-align: center;
+}
+
+.badge--gray {
+    background: var(--color-gray);
+    color: var(--color-white);
 }
 
 /* Our Boxes */
@@ -136,6 +145,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-white);
 }
 
+
 .btn--secondary {
     background: var(--color-secondary);
     --local-background: var(--color-secondary);
@@ -163,6 +173,15 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px solid var(--local-background);
     --local-border-size: 2px;
     font-size: 1.6rem;
+}
+
+
+.btn--rounded {
+    border-radius: 50rem;
+}
+
+.btn--small {
+    font-size: 1.1rem;
 }
 
 .btn--outline {
@@ -201,8 +220,101 @@ h1, h2, h3, h4, h5, h6 {
 .input-box-with-btn input::placeholder {
     font-size: 1.2rem;
     font-weight: 400;
+}
 
+/* Course card */
+
+
+.course-card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.course__image {
+    width: 100%;
+    height: 23rem;
+}
+
+.course__header-link {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.6rem;
+    display: inline-block;
+    margin: 2rem;
+}
+
+.course__content {
+    /*padding: 2rem;*/
+}
+
+.course__body {
+    text-align: justify;
+    font-size: 1.4rem;
+    font-family: vazir;
+    margin: 0 2rem 2rem;
+    line-height: 1.6;
 }
 
 
+.course__footer {
+    padding: 2rem 2rem;
+    background: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    display: grid;
+    grid-template-columns: 1fr max-content max-content;
+    justify-items: start;
+    column-gap: 1rem;
+}
 
+
+.course__original-price {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: rgb(108, 117, 125);
+}
+
+.course__offed-price {
+    font-size: 1.3rem;
+    color: var(--color-green-darker);
+}
+
+.course__imagine {
+    position: absolute;
+    width: 100%;
+    height: 23rem;
+    top: 0;
+    left: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transition: background 0.1s ease-in-out;
+}
+
+.course__imagine .badge {
+    font-family: vazir-light-fa;
+    font-size: 1rem;
+}
+
+.course__imagine .course__hidden {
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.2s ease-out 0.1s;
+}
+
+.course__imagine .course__buy-btn {
+    transition: 0.2s ease-out;
+}
+
+.course-card:hover .course__imagine {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.course-card:hover .course__hidden {
+    height: auto;
+    width: auto;
+    transform: scale(1);
+    opacity: 1;
+}
