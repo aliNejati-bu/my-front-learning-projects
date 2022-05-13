@@ -350,6 +350,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.expanded .collapsible_content{
+.expanded .collapsible_content {
     max-height: 100vh;
+}
+
+
+/* section headers */
+
+.section-header{
+    font-size: 1.6rem;
+    border-bottom: 3px solid var(--color-secondary);
+    padding-bottom: 0.9rem;
+    width: fit-content;
+    margin-bottom: 2rem;
 }
