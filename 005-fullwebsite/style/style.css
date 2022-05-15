@@ -410,15 +410,19 @@ h1, h2, h3, h4, h5, h6 {
     flex-grow: 1;
 }
 
-.next-courses__item-footer .btn--small{
+.next-courses__item-footer .btn--small {
     font-size: 0.9rem;
 }
 
-@media screen and (max-width: 994px){
-    .next-courses{
+@media screen and (max-width: 994px) {
+    .next-courses {
         grid-template-columns: 1fr;
     }
-    .next-courses>img{
+
+    .next-courses > img {
         display: none;
     }
 }
+
+
+/*  */
