@@ -435,12 +435,62 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem 3rem 1rem;
 }
 
-.experience{
+.experience {
     text-align: center;
 }
 
-.experience__title{
+.experience__title {
     margin-top: 1rem;
     font-size: 1.6rem;
     margin-bottom: 2rem;
+}
+
+/* masters */
+
+.masters {
+    overflow: hidden;
+    border-radius: 5px;
+    max-width: 25.5rem;
+    border: 1px solid rgba(0, 0, 0, .125);
+    text-align: center;
+}
+
+.masters__image {
+    width: 100%;
+}
+
+.masters__name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 1.5rem 0 2rem;
+}
+
+.masters__roll {
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+}
+
+
+.masters__socials {
+    border-top: 1px solid rgba(0, 0, 0, .125);
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1.3rem;
+    line-height: 0;
+}
+
+.masters__socials i {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.masters__socials .fa-instagram {
+    color: #dc3545;
+}
+
+.masters__socials .fa-telegram {
+    color: #007bff;
+}
+
+.masters__socials .fa-whatsapp {
+    color: #28a745;
 }
