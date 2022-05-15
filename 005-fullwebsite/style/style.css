@@ -357,10 +357,68 @@ h1, h2, h3, h4, h5, h6 {
 
 /* section headers */
 
-.section-header{
+.section-header {
     font-size: 1.6rem;
     border-bottom: 3px solid var(--color-secondary);
     padding-bottom: 0.9rem;
     width: fit-content;
     margin-bottom: 2rem;
+}
+
+
+/* next-courses */
+
+.next-courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    width: 100%;
+}
+
+.next-courses > img {
+    width: 100%;
+    height: 100%;
+}
+
+.next-courses__header {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-size: 1.4rem;
+}
+
+.next-courses__header:hover {
+    color: var(--color-secondary-darker);
+}
+
+.next-courses__item > p {
+    font-size: 1.3rem;
+    color: rgb(33, 37, 41);
+    margin-top: 1.9rem;
+}
+
+.next-courses__item-footer {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+.next-courses__date {
+    font-size: 1.1rem;
+    color: rgb(108, 117, 125);
+    flex-grow: 1;
+}
+
+.next-courses__item-footer .btn--small{
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 994px){
+    .next-courses{
+        grid-template-columns: 1fr;
+    }
+    .next-courses>img{
+        display: none;
+    }
 }
