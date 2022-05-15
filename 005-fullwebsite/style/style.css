@@ -457,6 +457,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .masters__image {
     width: 100%;
+    height: 60%;
 }
 
 .masters__name {
@@ -494,4 +495,57 @@ h1, h2, h3, h4, h5, h6 {
 
 .masters__socials .fa-whatsapp {
     color: #28a745;
+}
+
+/* blog-post-card */
+
+.blog-post-card {
+    border: 1px solid rgba(0, 0, 0, .125);
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0.2rem .3rem rgba(0, 0, 0, .075);
+}
+
+.blog-post-card > img {
+    width: 100%;
+}
+
+.blog-post-card__content {
+    padding: 2rem;
+}
+
+.blog-post-card__link {
+    text-decoration: none;
+    color: black;
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.blog-post-card__review {
+    font-size: 1.3rem;
+    font-family: vazir;
+}
+
+.blog-post-card__footer{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr max-content;
+}
+
+.blog-post-card__information {
+    display: inline-block;
+    color: #6c757d;
+    font-size: 1.2rem;
+    background: #f8f9fa;
+    padding: 1rem;
+}
+
+
+.blog-post-card__owner{
+    margin: 0.5rem;
+}
+
+.blog-post-card__btn{
+    margin: 0;
 }
