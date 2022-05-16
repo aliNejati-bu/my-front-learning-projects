@@ -37,6 +37,11 @@ body {
 }
 
 
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -133,16 +138,21 @@ h1, h2, h3, h4, h5, h6 {
     --local-border-size: 1px;
 }
 
+.btn i {
+
+}
 
 .btn--primary {
     background: var(--colo-primary);
     --local-background: var(--colo-primary);
     color: var(--color-white);
+    border: 1px solid var(--colo-primary);
 }
 
 
 .btn--primary:hover {
     background-color: var(--color-primary-darker);
+    border: 1px solid var(--color-primary-darker);
     color: var(--color-white);
 }
 
@@ -151,10 +161,12 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--color-secondary);
     --local-background: var(--color-secondary);
     color: var(--color-white);
+    border: 1px solid var(--color-secondary);
 }
 
 .btn--secondary:hover {
     background: var(--color-secondary-darker);
+    border: 1px solid var(--color-secondary-darker);
 }
 
 
@@ -221,6 +233,7 @@ h1, h2, h3, h4, h5, h6 {
 .input-box-with-btn input::placeholder {
     font-size: 1.2rem;
     font-weight: 400;
+    font-family: vazir;
 }
 
 /* Course card */
@@ -656,8 +669,29 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 1/5;
     color: #6c757d;
     margin-top: 3rem;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
     text-align: center;
     padding: 2rem;
+}
+
+/* header */
+
+
+.header__wither {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content max-content max-content;
+    align-items: center;
+}
+
+.header__wither .header__logo {
+    height: 80px;
+}
+
+.header__wither .input-box-with-btn {
+    margin: 0 7rem;
+}
+
+.header__btn {
+    margin: 0 0.8rem;
 }
