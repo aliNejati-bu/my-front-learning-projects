@@ -584,12 +584,80 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 3rem;
 }
 
-.footer__contact_item{
+.footer__contact_item {
     margin-bottom: 2rem;
 }
 
-.footer__contact_item i{
+.footer__contact_item i {
     color: #6c757d;
     display: inline-block;
     margin-left: 0.5rem;
+}
+
+.footer__title {
+    margin-top: 2.8rem;
+    text-align: center;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+}
+
+
+.footer__list_item {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.footer__list_item a {
+    color: var(--color-body);
+    text-decoration: none;
+}
+
+
+.footer__newsletter_btn {
+    margin-top: 6rem;
+}
+
+
+.footer__social {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.footer__social span {
+    display: inline-block;
+    text-align: center;
+    vertical-align: center;
+    padding: 0.3rem;
+    color: var(--color-white);
+}
+
+.footer__social_insta {
+    background: rgb(187, 62, 139);
+}
+
+.footer__social_twitter {
+    background: #17a2b8;
+}
+
+.footer__social_youtube {
+    background: #dc3545;
+}
+
+.footer__social_telegram {
+    background: #007bff;
+}
+
+.footer__copyright {
+    grid-column: 1/5;
+    color: #6c757d;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
 }
