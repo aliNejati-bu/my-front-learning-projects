@@ -7,53 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .cont {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            flex-wrap: wrap;
-            width: 100vw !important;
-            justify-content: space-between;
-            align-items: baseline;
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
         }
 
-        .cont > :first-child{
-            color: red;
-        }
-
-        div > div {
-            width: 20rem;
-            height: 10rem;
+        input:checked~div{
+            background: black;
         }
     </style>
     <link rel="stylesheet" href="../005-fullwebsite/style/fontawesome/css/all.css">
 </head>
 <body>
-<i class="fa fa-user"></i>
-<div class="cont">
-    <div style="background: red"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis, commodi
-        dignissimos in modi molestiae, non quas quod ratione saepe totam veritatis vitae voluptatum? Asperiores
-        aspernatur assumenda doloribus esse fuga in ipsum labore magni modi nisi officia quaerat recusandae, voluptate!
-    </div>
-    <div style="background: blue;height: 12rem">
-        <div>
-            a > a
-        </div>
-        <div>
-            a > b
-        </div>
-    </div>
-    <div style="background: gold;">c</div>
-    <div style="background: green;">c</div>
-    <div style="background: yellow;">c</div>
-    <div style="background: deepskyblue;">c</div>
-    <div style="background: slateblue;">c</div>
-    <div style="background: hotpink;">c</div>
-    <div style="background: lightpink;">c</div>
-    <div style="background: #6d44b8;">c</div>
-    <div style="background: springgreen;">c</div>
-    <div style="background: purple;">c</div>
-</div>
-
+<input type="checkbox">
+<div></div>
 </body>
 </html>
