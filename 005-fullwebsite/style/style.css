@@ -1,6 +1,6 @@
 @import url("fonts/font.css");
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -11,6 +11,10 @@
 
 html {
     font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
 }
 
 :root {
@@ -43,9 +47,33 @@ body {
 
 
 .container {
-    max-width: 1140px;
     margin: 0 auto;
 }
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
 
 /* typography */
 
@@ -219,26 +247,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .input-box-with-btn {
     display: flex;
-    border: 1px solid var(--color--input-border);
-    border-radius: 50rem;
-    overflow: hidden;
 }
 
 .input-box-with-btn .btn {
     margin: 0;
+    border-top-left-radius: 50rem;
+    border-bottom-left-radius: 50rem;
 }
 
 .input-box-with-btn input {
-    border: 0;
     outline: 0;
     flex-grow: 1;
     padding-right: 1rem;
+    border: 1px solid var(--color--input-border);
+    border-top-right-radius: 50rem;
+    border-bottom-right-radius: 50rem;
+    transition: 0.3s;
 }
+
+
 
 .input-box-with-btn input::placeholder {
     font-size: 1.2rem;
     font-weight: 400;
     font-family: vazir;
+}
+
+
+.input-box-with-btn input:focus{
+    border: 1px solid var(--color-secondary);
 }
 
 /* Course card */
@@ -704,11 +741,11 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0.8rem;
 }
 
-.header__smaller{
+.header__smaller {
     display: none;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
     .header__wither {
         display: none;
     }
@@ -762,7 +799,51 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* nav */
-.nav{
+.nav {
     background: white;
     margin: 0;
+    color: black;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    padding-top: 1.5rem;
+}
+
+.nav a {
+    color: black;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav__list_item {
+    margin: 0 1.5rem 1.8rem;
+    font-size: 1.4rem;
+    flex-basis: 100%;
+}
+
+.nav .collapsible__icon {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+    .nav__list {
+        flex-wrap: nowrap;
+    }
+
+    .nav .collapsible_content {
+        max-height: 100vh;
+        opacity: 1;
+    }
+
+    .nav__list_item {
+        flex-basis: auto;
+    }
+
+    .nav .collapsible__icon {
+        display: none;
+    }
 }
