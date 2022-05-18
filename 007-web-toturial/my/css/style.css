@@ -1,14 +1,80 @@
-@font-face{
+@font-face {
     font-family: iran;
     src: url(../fonts/iran.ttf);
 }
 
-*{
+html {
+    font-size: 62.5%;
+}
+
+* {
     font-family: iran;
 }
 
-*, *::after, *::before{
+*, *::after, *::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+}
+
+/* Header */
+
+.header{
+    font-size: 1.6rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3rem 1.4rem;
+    font-size: 1.1em;
+}
+
+.nav__right {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav__right_item a {
+    color: #444;
+    margin: 0.5rem 1.5rem;
+}
+
+
+.nav__left{
+    list-style: none;
+}
+
+/* Button */
+
+
+.btn{
+    border-radius: 5px;
+    font-size: 1.4rem;
+    padding: 1rem 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn--white{
+    color: black;
+    border: 1px solid #666;
+}
+.btn i{
+    font-size: 2rem;
+    margin: 0 0 0 2rem;
 }
