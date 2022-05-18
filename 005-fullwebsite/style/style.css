@@ -189,6 +189,13 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-white);
 }
 
+.btn--purple {
+    background: var(--color-purple);
+    --local-background: var(--color-purple);
+    color: var(--color-white);
+    border: 1px solid var(--color-purple);
+}
+
 
 .btn--secondary {
     background: var(--color-secondary);
@@ -266,7 +273,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
 .input-box-with-btn input::placeholder {
     font-size: 1.2rem;
     font-weight: 400;
@@ -274,7 +280,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.input-box-with-btn input:focus{
+.input-box-with-btn input:focus {
     border: 1px solid var(--color-secondary);
 }
 
@@ -847,3 +853,41 @@ h1, h2, h3, h4, h5, h6 {
         display: none;
     }
 }
+
+/* Hero */
+
+.hero {
+    width: 100%;
+    height: 500px;
+    background: url("../images/intro2-bg.jpg ");
+    background-size: 100% 100%;
+}
+
+
+.hero__wrapper {
+    width: 50%;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 8rem;
+}
+
+.hero__title {
+    margin-bottom: 6rem;
+    color: var(--color-secondary);
+    font-size: 3.2rem;
+}
+
+.hero__content{
+    line-height: 2.5;
+}
+
+.hero__btn_wrapper{
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 778px){
+    .hero{
+        display: none;
+    }
+}
+
