@@ -30,6 +30,7 @@ a {
     --color-body: rgb(33, 37, 41);
     --color-green-darker: #28a745;
     --color-gray: #6c757d;
+    --color-orange: #ff8b33;
 }
 
 * {
@@ -123,10 +124,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .our-box {
     text-align: center;
-    margin: 3rem;
+    margin: 3rem 1rem;
     padding: 1rem;
     border-radius: 3px;
-    box-shadow: 1px 5px 20px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 7px 10px 1px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,11 +151,23 @@ h1, h2, h3, h4, h5, h6 {
 .our-box__link {
     color: white;
     text-decoration: none;
+    margin-top: 1rem;
 }
 
 
 .our-box--green {
     background: var(--color-green);
+}
+
+
+.our-box--orange{
+    background: var(--color-orange);
+}
+
+
+
+.our-box--secondary{
+    background: var(--color-secondary);
 }
 
 /* Buttons */
@@ -891,3 +904,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* our box section */
+
+
+.section-our-boxes{
+    margin-top: 1rem;
+}
+
+.section-our-boxes .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
