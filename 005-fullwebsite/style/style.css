@@ -545,20 +545,23 @@ h1, h2, h3, h4, h5, h6 {
 .masters__roll {
     color: var(--color-secondary);
     font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 
 .masters__socials {
     border-top: 1px solid rgba(0, 0, 0, .125);
     background: rgba(0, 0, 0, 0.05);
-    padding: 1.3rem;
-    line-height: 0;
-    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5rem;
 }
 
 .masters__socials i {
     display: inline-block;
     margin: 0.5rem;
+    line-height: 0;
 }
 
 .masters__socials .fa-instagram {
@@ -982,3 +985,22 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
     }
 }
+
+
+/* masters section */
+
+.section-masters .section-header{
+    margin: 2rem 0;
+}
+
+.masters__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+@media screen and (max-width: 990px){
+    .section-masters{
+        display: none;
+    }
+}
+
