@@ -511,6 +511,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .experience {
     text-align: center;
+    width: 14rem;
+    margin-bottom: 2rem;
 }
 
 .experience__title {
@@ -936,20 +938,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.section-courses__courses{
+.section-courses__courses {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 4rem;
     row-gap: 2rem;
 }
 
-@media screen and (max-width: 992px){
-    .section-courses__courses{
+@media screen and (max-width: 992px) {
+    .section-courses__courses {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media screen and (max-width: 765px){
-    .section-courses__courses{
+
+@media screen and (max-width: 765px) {
+    .section-courses__courses {
         grid-template-columns: 1fr;
     }
 }
@@ -957,6 +960,25 @@ h1, h2, h3, h4, h5, h6 {
 
 /* next Courses */
 
-.section-next-courses .section-header{
+.section-next-courses .section-header {
     margin-top: 5rem;
+}
+
+
+/* exp section */
+.section-experience .section-header {
+    margin-top: 5rem;
+}
+
+.section-experience__items{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width: 572px) {
+    .section-experience__items{
+        flex-direction: column;
+    }
 }
