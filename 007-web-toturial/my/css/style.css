@@ -126,6 +126,10 @@ body {
     color: rgba(0, 0, 0, 0.4);
 }
 
+
+
+
+
 /* product card */
 
 .product_card {
@@ -211,4 +215,9 @@ body {
 
 .product__action_btn:hover span{
     display: inline;
+}
+
+/* product section */
+.section_new_P{
+    margin: 2rem;
 }
