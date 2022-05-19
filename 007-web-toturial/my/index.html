@@ -8,11 +8,15 @@
     <title>Document</title>
     <link
             rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+            rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
     />
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="height: 200vh">
+<body>
 <header class="header">
     <nav class="nav">
         <ul class="nav__right">
@@ -48,8 +52,34 @@
         </ul>
     </nav>
     <section class="slider">
-
+        <div class="slider__item_wrapper">
+            <div id="slider_1" class="slider__item active">
+                <img src="images/s1.jpg" alt="">
+                <span>آهنگ ها رو زنده تر از اون چیزی که هستن گوش بده</span>
+            </div>
+            <div id="slider_2" class="slider__item">
+                <img src="images/s2.jpg" alt="">
+                <span style="color: #fff">
+                کیفیت صدایی که همیشه
+                <br>
+              دنبالش بودی اینجاست
+            </span>
+            </div>
+            <div id="slider_3" class="slider__item">
+                <img src="images/s3.jpg" alt="">
+                <span>
+                رویا هاتو با صدای بلند گوش بده
+            </span>
+            </div>
+        </div>
+        <div class="slider__buttons">
+            <i onclick="checkSlide('slider_1',1)" class="fas fa-circle"></i>
+            <i onclick="checkSlide('slider_2',2)" class="fas fa-circle"></i>
+            <i onclick="checkSlide('slider_3',3)" class="fas fa-circle"></i>
+        </div>
     </section>
 </header>
+
+<script src="js/main.js"></script>
 </body>
 </html>

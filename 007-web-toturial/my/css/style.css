@@ -33,6 +33,8 @@ body {
 
 .header{
     font-size: 1.6rem;
+    animation-name: fadeIn;
+    animation-duration: 2s;
 }
 
 .nav {
@@ -77,4 +79,48 @@ body {
 .btn i{
     font-size: 2rem;
     margin: 0 0 0 2rem;
+}
+
+/* slider */
+
+.slider{
+    position: relative;
+}
+
+.slider__item img{
+    width: 100%;
+}
+
+.slider__item{
+    display: none;
+}
+
+.slider .active{
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    display: block;
+}
+
+.slider__item span{
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    font-size: 2.4rem;
+}
+
+.slider__buttons{
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+}
+
+.slider__buttons i{
+    margin-left: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.slider__buttons i:hover{
+    color: rgba(0,0,0,0.4);
 }
