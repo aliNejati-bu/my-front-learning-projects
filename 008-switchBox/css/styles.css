@@ -1,0 +1,44 @@
+* *:after *:before{
+    box-sizing: border-box;
+}
+
+.switch-box{
+    width: 100px;
+    height: 52px;
+    display: inline-block;
+    position: relative;
+}
+
+.switch-box__input{
+    display: none;
+}
+
+.switch-box__slider{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #ccc;
+    transition: 0.4s;
+}
+
+.switch-box__slider:before{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: white;
+    content: "";
+    left: 6px;
+    bottom: 6px;
+    transition: 0.4s;
+}
+
+
+.switch-box__input:checked + .switch-box__slider{
+    background: gold;
+}
+
+.switch-box__input:checked + .switch-box__slider:before {
+    left: 53px;
+}
