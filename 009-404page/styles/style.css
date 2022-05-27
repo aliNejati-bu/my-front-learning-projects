@@ -16,7 +16,7 @@
 
 
 @media screen and (min-width: 1024px) {
-    :root{
+    :root {
         --biggest-font-size: 5rem;
         --normal-font-size: 1rem;
         --smaller-font-size: .813rem;
@@ -24,13 +24,13 @@
 }
 
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: var(--font-body);
     font-size: var(--normal-font-size);
     font-weight: 500;
@@ -38,28 +38,81 @@ body{
 }
 
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
 
 
-
-.container{
+.container {
     max-width: 1024px;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 }
 
 
-.main{
+.main {
     overflow: hidden;
+}
+
+
+/* nav menu */
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+}
+
+.nav__logo{
+    font-weight: 700;
+}
+
+.nav__toggle{
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.nav__menu{
+    background: var(--first-color);
+    width: 100%;
+    position: fixed;
+    padding: 5rem 4rem;
+    top: -100%;
+    right: 0;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    box-shadow: 0 2px 4px rgba(40, 39, 37, 0.15);
+    transition: 0.4s ease-in-out;
+}
+
+.nav__menu_close_btn{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.nav__menu_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.nav__menu_item a{
+    color: var(--text-color);
+}
+
+.nav__open_menu{
+    top: 0;
 }
