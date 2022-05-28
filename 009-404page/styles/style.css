@@ -63,24 +63,30 @@ img {
     overflow: hidden;
 }
 
+.header {
+    position: fixed;
+    width: 100%;
+}
+
 
 /* nav menu */
-.nav{
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: var(--header-height);
 }
 
-.nav__logo{
+.nav__logo {
     font-weight: 700;
 }
 
-.nav__toggle{
+.nav__toggle {
     font-size: 1.25rem;
     cursor: pointer;
 }
-.nav__menu{
+
+.nav__menu {
     background: var(--first-color);
     width: 100%;
     position: fixed;
@@ -93,7 +99,7 @@ img {
     transition: 0.4s ease-in-out;
 }
 
-.nav__menu_close_btn{
+.nav__menu_close_btn {
     position: absolute;
     top: 1rem;
     right: 1.5rem;
@@ -102,17 +108,82 @@ img {
     font-size: 1.5rem;
 }
 
-.nav__menu_list{
+.nav__menu_list {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 2rem;
 }
 
-.nav__menu_item a{
+.nav__menu_item a {
     color: var(--text-color);
 }
 
-.nav__open_menu{
+.nav__open_menu {
     top: 0;
 }
+
+
+/* Home */
+
+
+.home {
+    height: 100vh;
+    padding: 10rem 0 2rem;
+    background: var(--first-color);
+    display: grid;
+    justify-items: center;
+}
+
+.home__container {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.home__title {
+    font-size: var(--biggest-font-size);
+    margin: 0.75rem 0;
+}
+
+
+.home__ghost img {
+    width: 230px;
+    animation: ghost 1.8s infinite alternate;
+}
+
+.home__btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--text-color);
+    color: white;
+    display: inline-block;
+    border-radius: 3rem;
+    margin-top: 2rem;
+    transition: 0.4s ease-in-out;
+}
+
+.home__btn:hover {
+    box-shadow: 0 4px 12px hsl(38, 69%, 8%, 20%);
+}
+
+.home__shadow{
+    width: 130px;
+    height: 24px;
+    background-color: hsla(38, 21%, 19%, .16);
+    margin: 0 auto;
+    border-radius: 50%;
+    filter: blur(7px);
+    animation: shadow 1.8s infinite alternate;
+}
+
+.footer{
+    font-size: var(--smaller-font-size);
+
+    align-self: flex-end;
+}
+.footer span{
+    margin: 0 0.25rem;
+    justify-content: center;
+}
+
