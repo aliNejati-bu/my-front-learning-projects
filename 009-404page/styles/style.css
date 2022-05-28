@@ -129,7 +129,7 @@ img {
 
 .home {
     height: 100vh;
-    padding: 10rem 0 2rem;
+    padding: 8rem 0 2rem;
     background: var(--first-color);
     display: grid;
     justify-items: center;
