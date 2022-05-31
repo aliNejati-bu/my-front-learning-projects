@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --color-primary: #FDD935;
+    --color-acent:#E1E2E2;
+    --color-blak: #000;
+}
+
+body{
+    background: var(--color-primary);
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}

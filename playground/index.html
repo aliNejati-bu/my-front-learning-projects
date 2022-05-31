@@ -6,29 +6,45 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
     <style>
-        div {
-            width: 100px;
-            height: 100px;
-            background: red;
+        .box{
+            width: 20rem;
+            height: 20rem;
+            background: #6d44b8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            transition: 0.9s ease-in-out;
         }
 
-        input:checked~div{
-            background: black;
+        .box:hover{
+            transform: scale(1.2);
         }
     </style>
-    <link rel="stylesheet" href="../005-fullwebsite/style/fontawesome/css/all.css">
 </head>
 <body>
-<div id="slids">
-    <span>ali</span>
-    <span>nejati</span>
-    <span>hatam</span>
+<div class="box">
+    <h1 id="h1">
+        im Ali
+        <span style="color: red" class="test">ali</span>
+    </h1>
+    <py>
+        print("ok")
+    </py>
 </div>
-
 <script>
-    let ch = document.querySelector("#slids").children
-    console.log(ch.length)
+   /* let box = document.querySelector(".box");
+    console.log(box)
+    setTimeout(()=>{
+        box.style.transform = "scale(5)";
+    },1000)*/
+   let box = document.querySelector(".box");
+   box.addEventListener("click",(ev)=>{
+       console.log(ev.target)
+   });
 </script>
 </body>
 </html>
