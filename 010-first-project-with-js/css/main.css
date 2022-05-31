@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
 
 *,
 *::after,
@@ -12,10 +12,6 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    font-family: 'Kalam', cursive;
-}
-
 
 :root {
     --color-primary: #FDD935;
@@ -25,10 +21,14 @@ body {
     /* Size */
     --size-header: 8rem;
     --fize-font-header: 2.6rem;
+
+    /* Font */
+    --font-body: 'Tajawal', sans-serif;
 }
 
 body {
     background: var(--color-primary);
+    font-family: var(--font-body);
 }
 
 .container {
@@ -45,7 +45,7 @@ body {
     box-shadow: inset 0px 0px 26px -3px rgba(0, 0, 0, 0.57);
     height: 4.2rem;
     width: 29rem;
-    font-family: 'Kalam', cursive;
+    font-family: var(--font-body);
     padding: 0.5rem 2rem;
     border-radius: 5px;
     transition: 300ms;
@@ -54,7 +54,7 @@ body {
 
 
 .input:focus {
-    box-shadow: inset 0px 0px 26px -3px rgba(0,0,0,0.57), 0px 0px 0px 3px var(--color-primary);
+    box-shadow: inset 0px 0px 26px -3px rgba(0, 0, 0, 0.57), 0px 0px 0px 3px var(--color-primary);
 }
 
 
@@ -77,4 +77,5 @@ body {
 
 .header__title {
     font-size: var(--fize-font-header);
+    font-weight: 800;
 }
