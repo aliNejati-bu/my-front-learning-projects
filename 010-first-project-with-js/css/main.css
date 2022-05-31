@@ -17,19 +17,24 @@ html {
     --color-primary: #FDD935;
     --color-acent: #E1E2E2;
     --color-blak: #000;
+    --color-blak2: #222;
 
     /* Size */
     --size-header: 8rem;
     --fize-font-header: 2.6rem;
-
+    --size-font-body: 1.8rem;
     /* Font */
     --font-body: 'Tajawal', sans-serif;
+
+    --shadow-card: 10px 10px 26px -3px rgba(0, 0, 0, 0.57);
 }
 
 body {
     background: var(--color-primary);
     font-family: var(--font-body);
+    font-size: var(--size-font-body);
 }
+
 
 .container {
     max-width: 1024px;
@@ -78,4 +83,77 @@ body {
 .header__title {
     font-size: var(--fize-font-header);
     font-weight: 800;
+}
+
+
+/* Home */
+
+.home {
+    padding: 6rem 0;
+}
+
+.home__items_wrapper {
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 1rem 3rem;
+    background: rgba(255, 255, 255);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-card);
+}
+
+.home__add_title {
+    font-weight: 500;
+    font-size: 3.2rem;
+}
+
+.home .input {
+    border: 3px solid var(--color-blak);
+    background: var(--color-primary);
+    width: 0;
+    box-shadow: inset var(--shadow-card);
+    flex-grow: 1;
+    font-size: var(--size-font-body);
+}
+
+.home .input:focus {
+    box-shadow: inset var(--shadow-card), 0px 0px 0px 3px var(--color-primary);
+}
+
+.home .input::placeholder{
+    color: var(--color-blak);
+    opacity: 1;
+}
+
+.home__form_wrapper {
+    display: flex;
+    width: 100%;
+    column-gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+/* Btn */
+.btn{
+    border-radius: 4px;
+    border: 0;
+    padding: 0.5rem 2rem;
+}
+
+
+.btn--submit{
+    background: var(--color-blak);
+    color: var(--color-acent);
+    font-family: var(--font-body);
+    font-size: var(--size-font-body);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn--submit:hover{
+    background: var(--color-blak2);
+}
+
+.btn--submit:focus{
+    box-shadow: 0px 0px 0px 2px var(--color-blak2);
 }
