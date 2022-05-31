@@ -1,31 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
 *,
 *::after,
 *::before {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    font-family: 'Kalam', cursive;
 }
 
 
 :root {
     --color-primary: #FDD935;
-    --color-acent:#E1E2E2;
+    --color-acent: #E1E2E2;
     --color-blak: #000;
+
+    /* Size */
+    --size-header: 8rem;
+    --fize-font-header: 2.6rem;
 }
 
-body{
+body {
     background: var(--color-primary);
 }
 
-.container{
+.container {
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+
+/* input */
+.input {
+    border: 0;
+    outline: 0;
+    box-shadow: inset 0px 0px 26px -3px rgba(0, 0, 0, 0.57);
+    height: 4.2rem;
+    width: 29rem;
+    font-family: 'Kalam', cursive;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    transition: 300ms;
+    font-size: 2rem;
+}
+
+
+.input:focus {
+    box-shadow: inset 0px 0px 26px -3px rgba(0,0,0,0.57), 0px 0px 0px 3px var(--color-primary);
+}
+
+
+/* Header */
+
+.header {
+    background: var(--color-blak);
+    width: 100%;
+    height: var(--size-header);
+    color: white;
+}
+
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header__title {
+    font-size: var(--fize-font-header);
 }
