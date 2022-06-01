@@ -165,7 +165,7 @@ body {
     transition: 0.3s;
 }
 .btn--delete:hover{
-    background: tomato;
+    background: #f1755f;
 }
 
 /* List */
