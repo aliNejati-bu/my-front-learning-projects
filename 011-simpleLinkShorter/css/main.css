@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Persia';
+    src: url('../fonts/Persia.eot?#') format('eot'), url('../fonts/Persia.woff') format('woff'), url('../fonts/Persia.ttf') format('truetype');
+    font-display: swap
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Persia';
+    background: url("../images/mark-harpur-HUOvKWXEdFY-unsplash.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    direction: rtl;
+    justify-content: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(5px);
+    flex-basis: 800px;
+    margin-top: 20rem;
+    border-radius: 10px;
+}
+
+.input-group {
+    width: 100%;
+}
