@@ -10,6 +10,14 @@
     padding: 0;
 }
 
+:root {
+    --color-btn: #ce4407;
+    --color-btn-hover: #b23c04;
+    --color-text-btn-data: #a05c30;
+    --color-btn-data: white;
+    --color-btn-data-hover: #f2f2f2;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -26,6 +34,7 @@ body {
     text-align: center;
     direction: rtl;
     justify-content: center;
+    padding: 3rem;
 }
 
 .container {
@@ -34,8 +43,76 @@ body {
     flex-basis: 800px;
     margin-top: 20rem;
     border-radius: 10px;
+    padding: 4rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .input-group {
     width: 100%;
+    display: flex;
+    margin: 3rem 0;
+    background: white;
+    direction: ltr;
+    padding: 1rem 1rem;
+    border-radius: 5rem;
+}
+
+
+.input-group .text-input {
+    flex-grow: 1;
+    border: none;
+    font-family: Persia;
+    outline: none;
+    width: 0;
+    padding: 0.5rem 1rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5rem;
+    font-family: Persia;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.btn-orange {
+    background: var(--color-btn);
+    color: white;
+}
+
+.btn-orange:hover {
+    background: var(--color-btn-hover);
+}
+.wrapper > h1 {
+    color: white;
+}
+
+
+.btn-data {
+    padding: 1.5rem 3.5rem;
+    color: var(--color-text-btn-data);
+    margin: 0 1rem;
+}
+
+.btn-data:hover {
+    background: var(--color-btn-data-hover);
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    .btn{
+        padding: 1rem 1.5rem;
+        font-size: 1.2rem;
+    }
+
+
+    .btn-data{
+        padding: 1rem 2rem;
+    }
 }
