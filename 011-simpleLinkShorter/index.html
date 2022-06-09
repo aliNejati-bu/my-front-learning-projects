@@ -9,16 +9,36 @@
     <title>کوتاه کننده لینک</title>
 </head>
 <body>
-<div class="container">
+<div class="container open" id="main-container">
     <div class="wrapper">
         <h1>لوگوی ما</h1>
         <div class="input-group">
             <input placeholder="http://exmple.com" type="text" class="text-input">
-            <button class="btn btn-orange">ایجاد لینک</button>
+            <button class="btn btn-orange" id="btn">ایجاد لینک</button>
         </div>
-        <button class="btn btn-data">ایجاد با رول</button>
-        <button class="btn btn-data">ایجاد با بارکد</button>
+        <div class="btn-box">
+            <button class="btn btn-data">ایجاد با رول</button>
+            <button class="btn btn-data">ایجاد با بارکد</button>
+        </div>
     </div>
 </div>
+<div class="container container--link" id="link-container">
+    <div class="wrapper">
+        <h1>لینک کوتاه ایجاد شد</h1>
+        <img src="images/download.gif" class="qr-code" alt="">
+        <div class="link-box">
+            <span class="link-text">
+                http://exmple.com
+            </span>
+            <button class="btn btn-copy">کپی لینک</button>
+        </div>
+        <div class="btn-box">
+            <button class="btn btn-data">ایجاد با رول</button>
+            <button class="btn btn-data">ایجاد با بارکد</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -29,22 +29,33 @@ body {
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     display: flex;
     align-items: flex-start;
     text-align: center;
     direction: rtl;
     justify-content: center;
-    padding: 3rem;
 }
 
 .container {
     background: rgba(255, 255, 255, 0.13);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     flex-basis: 800px;
-    margin-top: 20rem;
     border-radius: 10px;
     padding: 4rem;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    width: 80rem;
+    top: -100%;
+    opacity: 0;
+}
+
+
+.open {
+    top: 25%;
+    opacity: 1;
 }
 
 .input-group {
@@ -86,6 +97,7 @@ body {
 .btn-orange:hover {
     background: var(--color-btn-hover);
 }
+
 .wrapper > h1 {
     color: white;
 }
@@ -101,18 +113,75 @@ body {
     background: var(--color-btn-data-hover);
 }
 
+
+.qr-code {
+    margin: 3rem 0;
+    width: 25%;
+}
+
+
+.link-box {
+    margin: 0rem 0 3rem;
+    direction: ltr;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-text{
+    color: white;
+    text-decoration: underline;
+}
+
+.btn-copy {
+    background: #f2f2f2;
+    color: #a05c30;
+}
+
+
+.container--link.open{
+    top: 15%;
+}
+
+
+@media screen and (max-width: 850px) {
+    .container {
+        width: 500px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .container {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container {
+        width: 300px;
+    }
+    .btn-data{
+        margin: 0.5rem 1rem;
+    }
+}
+
+
+
 @media screen and (max-width: 700px) {
     body {
         font-size: 1.2rem;
     }
 
-    .btn{
+    .btn {
         padding: 1rem 1.5rem;
         font-size: 1.2rem;
     }
 
 
-    .btn-data{
+    .container{
+        padding: 2rem;
+    }
+    .btn-data {
         padding: 1rem 2rem;
     }
 }
