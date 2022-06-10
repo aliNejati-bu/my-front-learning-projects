@@ -36,6 +36,12 @@
 }
 
 
+:root {
+    --btn-color: #ffc107;
+    --btn-color-hover: #ffd54f;
+}
+
+
 @font-face {
     font-family: Iran-Sans;
     src: url("../font/IRANSansWeb.eot");
@@ -75,6 +81,8 @@ body {
     border-radius: 5px;
     position: relative;
     overflow: hidden;
+    height: max-content;
+    transition: 0.2s ease-in-out;
 }
 
 
@@ -96,22 +104,74 @@ body {
     font-size: 1.6rem;
     display: inline-block;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
 .btn-start {
-    background: #ffc107;
+    background: var(--btn-color);
     color: white;
     display: block;
     width: max-content;
     margin: 3rem auto;
-    transition: 0.2s ease-in-out;
 }
 
 .btn-start:hover {
-    background: #ffd54f;
+    background: var(--btn-color-hover);
 }
 
 /* Text */
 .start__text {
     text-align: justify;
+}
+
+/* question section */
+.question {
+    margin: 1rem auto 3rem;
+    text-align: center;
+}
+
+.answer {
+    margin: 1rem auto 2rem;
+    background: #e0e0e0;
+    padding: 1rem;
+}
+
+.btn-restart {
+    background: var(--btn-color);
+    color: white;
+    display: block;
+    outline: none;
+    text-align: center;
+    margin: 3rem 0 6rem;
+}
+
+.btn-restart:hover {
+    background: var(--btn-color-hover);
+}
+
+.info_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.info__item {
+    font-size: 1.3rem;
+    border: 2px solid #dc3545;
+    flex-basis: 12rem;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.info__header{
+    background: #dc3545;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+}
+
+
+.info__body {
+    padding: 1rem 0;
+    text-align: center;
 }
