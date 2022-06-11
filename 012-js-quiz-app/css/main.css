@@ -163,7 +163,7 @@ body {
     overflow: hidden;
 }
 
-.info__header{
+.info__header {
     background: #dc3545;
     text-align: center;
     color: white;
@@ -174,4 +174,44 @@ body {
 .info__body {
     padding: 1rem 0;
     text-align: center;
+}
+
+.btn-review {
+    background: #dc3545;
+    color: white;
+    display: block;
+    text-align: center;
+    flex: 1;
+}
+
+.btn-end{
+    margin: 0;
+    flex: 1;
+}
+
+.end-btn-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+
+.correct{
+    background: #2ecc71;
+    color: white;
+}
+
+.y_answer{
+    background: #d44179;
+    color: white;
+}
+
+.correct.y_answer{
+    background: #2ecc71;
+    color: white;
+}
+
+.y_answer span{
+    color: rgba(0,0,0,0.5);
 }
