@@ -29,4 +29,68 @@ function start() {
 
     board.innerHTML = mainPageHtml;
 
+    eventInstance.pushEvent(startBtnId, (ev) => {
+        changePage(board, `
+    <div class="items in">
+        <h3 class="question">
+            خب سوال اول رو شانسی جواب بده :-)
+        </h3>
+        <div class="answer_wrapper">
+            <p class="answer">
+                الف)
+                گزینه شماره 1
+            </p>
+            <p class="answer">
+                ب)
+                گزینه شماره 2
+            </p>
+            <p class="answer">
+                ج)
+                گزینه شماره 3
+            </p>
+            <p class="answer">
+                د)
+                گزینه شماره 4
+            </p>
+        </div>
+
+        <a href="#" class="btn btn-restart">
+            شروع مجدد
+        </a>
+
+        <div class="info_wrapper">
+            <div class="info__item timer">
+                <p class="info__header timer__text">
+                    زمان باقی مانده:
+                </p>
+                <p class="info__body timer__time">
+                    <span class="timer__time&#45;&#45;minutes">00</span>
+                    :
+                    <span class="timer__time&#45;&#45;seconds">00</span>
+            </div>
+
+            <div class="info__item question_number">
+                <p class="info__header question_number__text">
+                    سوال شماره:
+                </p>
+                <p class="info__body question_number__number">
+                    <span class="question_number__number&#45;&#45;current">1</span>
+                    /
+                    <span class="question_number__number&#45;&#45;total">10</span>
+            </div>
+
+            <div class="info__item grade">
+                <p class="info__header grade__text">
+                    امتیاز شما:
+                </p>
+                <p class="info__body grade__number">
+                    <span class="grade__number&#45;&#45;current">0</span>
+                    /
+                    <span class="grade__number&#45;&#45;total">10</span>
+            </div>
+        </div>
+    </div>
+        `);
+    });
+
 }

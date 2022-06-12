@@ -47,10 +47,33 @@ function ClickEventSimulator(board) {
             if (targetId !== '') {
                 let elementEvent = this.events.find(ele => ele.id === targetId);
                 if (elementEvent) {
-                    elementEvent.callback()
+                    elementEvent.callback(ev)
                 }
             }
         })
     }
 
+}
+
+function changePage(board, newElement) {
+    let lastChild = board.firstElementChild ?? false;
+    if (!lastChild) {
+        board.innerHTML = newElement;
+        return
+    }
+    lastChild.style.animation = "backOutLeft 1s ease-in-out";
+
+
+    lastChild.style.position = "absolute";
+
+    let tempElement = document.createElement("div");
+    tempElement.innerHTML = newElement;
+    newElement = tempElement.lastElementChild;
+
+    board.appendChild(newElement)
+
+
+    setTimeout(() => {
+        board.removeChild(lastChild)
+    }, 500)
 }
