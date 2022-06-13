@@ -87,31 +87,6 @@ function GameCore(questions, board) {
 
             let answerId = "a" + (this.questions[this.courentQuestion]).answer.toString();
 
-            document.querySelectorAll(".answer").forEach(ele => {
-                if (ele.id === answerId) {
-                    ele.addEventListener("click", (ev) => {
-                        if (this.canAnswer) {
-                            ele.classList.add("correct")
-                            this.canAnswer = false;
-                            this.grade += this.questions[this.courentQuestion].grade;
-                            document.getElementById("current_grade").innerHTML = this.grade
-                            this.courentQuestion++;
-                            this.next();
-                        }
-                    });
-                } else {
-                    ele.addEventListener("click", (ev) => {
-                        if (this.canAnswer) {
-                            ele.classList.add("y_answer")
-                            ele.style.animation = "shake 400ms"
-                            document.getElementById(answerId).classList.add("correct")
-                            this.canAnswer = false;
-                            this.courentQuestion++;
-                            this.next();
-                        }
-                    });
-                }
-            });
 
             let endTime = this.questions[this.courentQuestion].time,
                 currentTime = 0;
@@ -123,11 +98,11 @@ function GameCore(questions, board) {
                     let m = parseInt(estTime / 60).toString();
                     let s = (estTime % 60).toString();
 
-                    if (m.length == 1) {
+                    if (m.length === 1) {
                         m = "0" + m;
                     }
 
-                    if (s.length == 1) {
+                    if (s.length === 1) {
                         s = "0" + s;
                     }
                     document.getElementById("minutes").innerText = m;
@@ -137,9 +112,40 @@ function GameCore(questions, board) {
                     clearInterval(timerInterval);
                     this.courentQuestion++;
                     document.getElementById(answerId).classList.add("correct");
-                    setTimeout(()=>{this.next()},1000)
+                    this.canAnswer = false;
+                    setTimeout(() => {
+                        this.next()
+                    }, 1000)
                 }
             }, 1000);
+
+            document.querySelectorAll(".answer").forEach(ele => {
+                if (ele.id === answerId) {
+                    ele.addEventListener("click", () => {
+                        if (this.canAnswer) {
+                            ele.classList.add("correct")
+                            this.canAnswer = false;
+                            this.grade += this.questions[this.courentQuestion].grade;
+                            document.getElementById("current_grade").innerHTML = this.grade
+                            this.courentQuestion++;
+                            clearInterval(timerInterval);
+                            setTimeout(()=>{this.next()},500)
+                        }
+                    });
+                } else {
+                    ele.addEventListener("click", () => {
+                        if (this.canAnswer) {
+                            ele.classList.add("y_answer")
+                            ele.style.animation = "shake 400ms"
+                            document.getElementById(answerId).classList.add("correct")
+                            this.canAnswer = false;
+                            this.courentQuestion++;
+                            clearInterval(timerInterval);
+                            setTimeout(()=>{this.next()},500)
+                        }
+                    });
+                }
+            });
 
 
         }
