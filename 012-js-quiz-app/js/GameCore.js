@@ -6,6 +6,8 @@ function GameCore(questions, board) {
     this.canAnswer = false;
 
 
+    this.playHistory = [];
+
     this.totalGrade = 0;
     questions.forEach(question => {
         this.totalGrade += question.grade
@@ -38,9 +40,9 @@ function GameCore(questions, board) {
                 ج)
                 ${this.questions[this.courentQuestion].op[2]}
             </p>
-            <p class="answer" id="a1">
+            <p class="answer" id="a4">
                 د)
-                ${this.questions[this.courentQuestion].op[1]}
+                ${this.questions[this.courentQuestion].op[3]}
             </p>
         </div>
 
@@ -110,9 +112,11 @@ function GameCore(questions, board) {
 
                 } else {
                     clearInterval(timerInterval);
-                    this.courentQuestion++;
                     document.getElementById(answerId).classList.add("correct");
+                    this.questions[this.courentQuestion].yourAnswer = "endTime";
+                    this.playHistory.push(this.questions[this.courentQuestion]);
                     this.canAnswer = false;
+                    this.courentQuestion++;
                     setTimeout(() => {
                         this.next()
                     }, 1000)
@@ -127,9 +131,13 @@ function GameCore(questions, board) {
                             this.canAnswer = false;
                             this.grade += this.questions[this.courentQuestion].grade;
                             document.getElementById("current_grade").innerHTML = this.grade
-                            this.courentQuestion++;
                             clearInterval(timerInterval);
-                            setTimeout(()=>{this.next()},500)
+                            this.questions[this.courentQuestion].yourAnswer = ele.id;
+                            this.playHistory.push(this.questions[this.courentQuestion]);
+                            this.courentQuestion++;
+                            setTimeout(() => {
+                                this.next()
+                            }, 500)
                         }
                     });
                 } else {
@@ -139,16 +147,150 @@ function GameCore(questions, board) {
                             ele.style.animation = "shake 400ms"
                             document.getElementById(answerId).classList.add("correct")
                             this.canAnswer = false;
-                            this.courentQuestion++;
                             clearInterval(timerInterval);
-                            setTimeout(()=>{this.next()},500)
+                            this.questions[this.courentQuestion].yourAnswer = ele.id;
+                            this.playHistory.push(this.questions[this.courentQuestion]);
+                            this.courentQuestion++;
+                            setTimeout(() => {
+                                this.next()
+                            }, 500)
                         }
                     });
                 }
             });
 
 
+        } else {
+            this.endPage()
         }
+    }
+
+    this.endPage = function () {
+        const endPage = `
+        <div class="items in">
+        <h1 class="items__heading">
+            نمره
+            <span class="grade">
+                12
+            </span>
+        </h1>
+        <p class="start__text first-p">
+            خب خب شما
+            <span class="time"> 120 </span>
+            تا سوال  رو جواب دادی و نمره
+            <span class="grade">
+                12
+            </span>
+            از مجموع امتیاز
+
+            <span class="total_grade">
+                100
+            </span>
+            گرفتید.
+            حالا اگر میخوایید میتونید دوباره به سوالات پاسخ دهید.
+        </p>
+        <p class="start__text">
+            از اونجایی که میگن مسئله چون حل شود آسان شود شما برای بار دوم سوالا آسونی داری.
+        </p>
+        <div class="end-btn-wrapper">
+            <a href="#" id="reset" class="btn btn-restart btn-end">دوباره</a>
+            <a href="#" class="btn btn-review" id="review">باز بینی پاسخ ها</a>
+        </div>
+    </div>
+        `;
+
+        changePage(board, endPage);
+
+        document.querySelectorAll('.grade').forEach(ele => {
+            ele.innerHTML = this.grade;
+        });
+
+        document.querySelectorAll('.total_grade').forEach(ele => {
+            ele.innerHTML = this.totalGrade;
+        });
+
+        document.querySelectorAll('.time').forEach(ele => {
+            ele.innerHTML = this.questions.length;
+        });
+
+        document.getElementById("reset").addEventListener("click", () => window.location.reload())
+
+        this.courentQuestion = 0;
+
+        document.getElementById("review").addEventListener("click", () => {
+            this.nextHistory()
+        });
+
+
+    }
+
+    this.nextHistory = function () {
+
+
+        if (this.courentQuestion >= 0 && this.courentQuestion < this.questions.length) {
+            const body = `
+        <div class="items in">
+        <h3 class="question">
+            (${this.courentQuestion + 1}) - ${this.questions[this.courentQuestion].title}
+        </h3>
+        <div class="answer_wrapper">
+            <p class="answer" id="a1">
+                الف)
+                ${this.questions[this.courentQuestion].op[0]}
+            </p>
+            <p class="answer" id="a2">
+                ب)
+                ${this.questions[this.courentQuestion].op[1]}
+            </p>
+            <p class="answer" id="a3">
+                ج)
+                ${this.questions[this.courentQuestion].op[2]}
+            </p>
+            <p class="answer" id="a4">
+                د)
+                ${this.questions[this.courentQuestion].op[3]}
+            </p>
+        </div>
+
+        <div class="end-btn-wrapper">
+            <a href="#" class="btn btn-restart btn-end" id="prev">سوال قبلی</a>
+            <a href="#" class="btn btn-review" id="next">سوال بعدی</a>
+        </div>
+    </div>
+        `;
+            changePage(this.board, body, () => {
+                let answerId = "a" + (this.questions[this.courentQuestion]).answer.toString();
+                document.getElementById(answerId).classList.add("correct");
+                if (this.playHistory[this.courentQuestion].yourAnswer !== "endTime") {
+                    document.getElementById(this.playHistory[this.courentQuestion].yourAnswer).classList.add("y_answer")
+                    document.getElementById(this.playHistory[this.courentQuestion].yourAnswer).innerHTML = document.getElementById(this.playHistory[this.courentQuestion].yourAnswer).innerHTML + " <span>(پاسخ شما)</span>"
+                } else {
+                    document.querySelector(".question").innerHTML = document.querySelector(".question").innerHTML + "(پایان زمان) "
+                }
+
+                let clickStats = true;
+
+                document.getElementById("prev").addEventListener("click", () => {
+                    if (clickStats) {
+                        console.log("prev called")
+                        this.courentQuestion--;
+                        clickStats = false;
+                        this.nextHistory();
+                    }
+                });
+                document.getElementById("next").addEventListener("click", () => {
+                    if (clickStats) {
+                        this.courentQuestion++;
+                        clickStats = false;
+                        this.nextHistory();
+                    }
+                });
+            })
+        } else {
+            this.endPage()
+        }
+
+
     }
 
 }

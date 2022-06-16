@@ -55,7 +55,8 @@ function ClickEventSimulator(board) {
 
 }
 
-function changePage(board, newElement) {
+function changePage(board, newElement, afterCb = () => {
+}) {
     let lastChild = board.firstElementChild ?? false;
     if (!lastChild) {
         board.innerHTML = newElement;
@@ -74,6 +75,7 @@ function changePage(board, newElement) {
 
 
     setTimeout(() => {
-        board.removeChild(lastChild)
+        board.removeChild(lastChild);
+        afterCb()
     }, 500)
 }
