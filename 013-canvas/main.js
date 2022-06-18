@@ -7,6 +7,7 @@ const colorsArray = ["#fff"];
 
 const ctx = canvas.getContext("2d")
 
+
 window.addEventListener("resize", function (ev) {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
@@ -19,20 +20,54 @@ const m = {
     y: undefined
 };
 
+class Vector2 {
+    constructor(x, y) {
+        this.x = x
+        this.y = y
+    }
+}
+
+let c = 0;
+
 class Particle {
     constructor() {
         this.x = m.x;
         this.y = m.y;
-        this.speedX = Math.random() * 3 - 1.5;
-        this.speedY = Math.random() * 3 - 1.5;
+        this.velocity = new Vector2(0, 0)
         this.color = `hsl(${hue},100%,50%)`;
-        this.size = Math.random() * 15 + 1
+        this.size = Math.random() * 3 + 1;
+        this.mass = 0.01*this.size;
+    }
+
+    gravity() {
+        for (let i = 0; i < particles.length; i++) {
+            if (particles[i].x !== this.x && particles[i].y !== this.y) {
+
+                let m1 = this.mass;
+                let m2 = particles[i].mass
+
+                let dx = this.x - particles[i].x
+                let dy = this.y - particles[i].y
+
+                let d = Math.sqrt(dx * dx + dy * dy)
+
+
+                if (d > 4) {
+                    let fx = 0.01 * ((m1 * m2) / d*d) * dx;
+                    let fy = 0.01 * ((m1 * m2) / d*d) * dy;
+                    console.log(fx);
+                    console.log(fy);
+                    particles[i].addForce(new Vector2(fx, fy))
+                }
+
+            }
+        }
     }
 
     update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        this.size -= 0.1
+        this.gravity()
+        this.x += this.velocity.x;
+        this.y += this.velocity.y;
     }
 
     draw() {
@@ -42,16 +77,23 @@ class Particle {
         ctx.fill()
         ctx.closePath()
     }
+
+    addForce(force) {
+        let ax = force.x / this.mass;
+        let ay = force.y / this.mass;
+        this.velocity.x += ax;
+        this.velocity.y += ay;
+    }
 }
 
 
-function init() {
+/*function init() {
     for (let i = 0; i < 100; i++) {
         particles.push(new Particle())
     }
 }
 
-init()
+init()*/
 
 
 function handleParticles() {
@@ -62,19 +104,20 @@ function handleParticles() {
             particles[i] = new Particle()
         }*/
 
-        for (let j = i; j < particles.length; j++) {
+        /*for (let j = i; j < particles.length; j++) {
             let dx = particles[i].x - particles[j].x
             let dy = particles[i].y - particles[j].y
             let d = Math.sqrt(dx * dx + dy * dy);
             if (d < 100) {
                 ctx.beginPath();
                 ctx.strokeStyle = particles[i].color;
-                ctx.lineHeight = 0.5
-                ctx.moveTo(particles[i].x,particles[i].y);
-                ctx.lineTo(particles[j].x,particles[j].y);
+                ctx.lineWidth = particles[i].size / 20;
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
                 ctx.stroke();
             }
-        }
+        }*/
+
 
         if (particles[i].size < 0.3) {
             particles.splice(i, 1);
@@ -87,9 +130,9 @@ function handleParticles() {
 let lastFrame = Date.now();
 
 function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-    /*ctx.fillStyle = "rgba(0,0,0,0.02)"
-    ctx.fillRect(0, 0, canvas.width, canvas.height);*/
+    /*ctx.clearRect(0, 0, canvas.width, canvas.height)*/
+    ctx.fillStyle = "rgba(0,0,0,0.1)"
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     handleParticles()
     let cf = Date.now();
     let ft = cf - lastFrame;
@@ -97,6 +140,7 @@ function animate() {
     lastFrame = cf
     document.getElementById("fps").innerHTML = parseInt(fps)
     hue++;
+
     requestAnimationFrame(animate)
 }
 
@@ -105,15 +149,18 @@ animate()
 canvas.addEventListener("click", (ev) => {
     m.x = ev.x
     m.y = ev.y
-    for (let i = 0; i < 3; i++) {
-        particles.push(new Particle())
+    for (let i = 0; i < 1; i++) {
+        let p = new Particle()
+        particles.push(p);
     }
 })
 
+/*
 canvas.addEventListener("mousemove", (ev) => {
     m.x = ev.x
     m.y = ev.y
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
         particles.push(new Particle())
     }
 })
+*/
