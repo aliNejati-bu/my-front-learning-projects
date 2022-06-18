@@ -21,8 +21,8 @@ const m = {
 
 class Particle {
     constructor() {
-        this.x = Math.random()*canvas.width;
-        this.y = Math.random()*canvas.height;
+        this.x = m.x;
+        this.y = m.y;
         this.speedX = Math.random() * 3 - 1.5;
         this.speedY = Math.random() * 3 - 1.5;
         this.color = `hsl(${hue},100%,50%)`;
@@ -32,6 +32,7 @@ class Particle {
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
+        this.size -= 0.1
     }
 
     draw() {
@@ -45,7 +46,7 @@ class Particle {
 
 
 function init() {
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 100; i++) {
         particles.push(new Particle())
     }
 }
@@ -57,9 +58,9 @@ function handleParticles() {
     for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].draw();
-        if (particles[i].x > window.innerWidth || particles.x < 0 || particles[i].y > window.innerHeight || particles.y < 0) {
+        /*if (particles[i].x > window.innerWidth || particles.x < 0 || particles[i].y > window.innerHeight || particles.y < 0) {
             particles[i] = new Particle()
-        }
+        }*/
 
         for (let j = i; j < particles.length; j++) {
             let dx = particles[i].x - particles[j].x
@@ -101,7 +102,7 @@ function animate() {
 
 animate()
 
-/*canvas.addEventListener("click", (ev) => {
+canvas.addEventListener("click", (ev) => {
     m.x = ev.x
     m.y = ev.y
     for (let i = 0; i < 3; i++) {
@@ -115,4 +116,4 @@ canvas.addEventListener("mousemove", (ev) => {
     for (let i = 0; i < 3; i++) {
         particles.push(new Particle())
     }
-})*/
+})
