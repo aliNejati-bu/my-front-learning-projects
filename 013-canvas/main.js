@@ -5,7 +5,12 @@ let hue = 0;
 const particles = [];
 const colorsArray = ["#fff"];
 
+
+
 const ctx = canvas.getContext("2d")
+
+ctx.fillStyle = "red";
+ctx.fillRect(10,10,100,200);
 
 
 window.addEventListener("resize", function (ev) {
@@ -53,10 +58,8 @@ class Particle {
 
 
                 if (d > 4) {
-                    let fx = 0.01 * ((m1 * m2) / d*d) * dx;
-                    let fy = 0.01 * ((m1 * m2) / d*d) * dy;
-                    console.log(fx);
-                    console.log(fy);
+                    let fx = 0.01 * ((m1 * m2) / (d*d)) * dx;
+                    let fy = 0.01 * ((m1 * m2) / (d*d)) * dy;
                     particles[i].addForce(new Vector2(fx, fy))
                 }
 
@@ -141,6 +144,7 @@ function animate() {
     document.getElementById("fps").innerHTML = parseInt(fps)
     hue++;
 
+
     requestAnimationFrame(animate)
 }
 
@@ -154,8 +158,8 @@ canvas.addEventListener("click", (ev) => {
         particles.push(p);
     }
 })
-
 /*
+
 canvas.addEventListener("mousemove", (ev) => {
     m.x = ev.x
     m.y = ev.y
@@ -163,4 +167,5 @@ canvas.addEventListener("mousemove", (ev) => {
         particles.push(new Particle())
     }
 })
+
 */
