@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import "animations.css";
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+:root {
+    /* color */
+    --color-primary: gray;
+}
+
+body {
+    font-family: 'Potta One', cursive;
+    background: var(--color-primary);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.some-header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.content {
+    display: none;
+    animation: fadeIn 0.5s;
+    position: relative;
+    position: relative;
+}
+
+.content__image {
+    width: 100%;
+    height: 90vh;
+}
+
+.slider__text {
+    animation: fromTop 0.5s ease-in-out;
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    left: 15rem;
+    top: 30rem;
+}
+
+.slider {
+    position: relative;
+}
+
+.next-btn {
+    position: absolute;
+    width: 5rem;
+    height: 90vh;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s ease-in-out;
+    background: rgb(154, 140, 163);
+    background: linear-gradient(90deg, rgba(154, 140, 163, 0) 0%, rgba(60, 60, 62, 1) 100%);
+    opacity: 0;
+    z-index: 1;
+
+}
+
+.next-text {
+    position: absolute;
+    width: 5rem;
+    height: 90vh;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.prev-text {
+    position: absolute;
+    width: 5rem;
+    height: 90vh;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next-btn:hover {
+    opacity: 1;
+}
+
+
+.prev-btn {
+    position: absolute;
+    width: 5rem;
+    height: 90vh;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s ease-in-out;
+    background: rgb(154, 140, 163);
+    background: linear-gradient(90deg, rgba(60, 60, 62, 1) 0%, rgba(154, 140, 163, 0) 100%);
+    opacity: 0;
+    z-index: 1;
+}
+
+.prev-btn:hover {
+    opacity: 1;
+}
+
+.page-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    gap: 6px;
+}
+
+.page-toggle i {
+    cursor: pointer;
+    transition: 100ms;
+
+}
+
+
+
+.active{
+    display: block;
+}
+
+.page-toggle i.in{
+    color: #cbc7c7;
+}
+
+.page-toggle i:hover {
+    color: gray;
+}

@@ -13,6 +13,7 @@ ctx.fillStyle = "red";
 ctx.fillRect(10,10,100,200);
 
 
+
 window.addEventListener("resize", function (ev) {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
@@ -57,10 +58,11 @@ class Particle {
                 let d = Math.sqrt(dx * dx + dy * dy)
 
 
-                if (d > 4) {
-                    let fx = 0.01 * ((m1 * m2) / (d*d)) * dx;
-                    let fy = 0.01 * ((m1 * m2) / (d*d)) * dy;
+                if (d > 0) {
+                    let fx = 0.01 * ((m1 * m2) / (d)) * dx;
+                    let fy = 0.01 * ((m1 * m2) / (d)) * dy;
                     particles[i].addForce(new Vector2(fx, fy))
+
                 }
 
             }
@@ -146,6 +148,7 @@ function animate() {
 
 
     requestAnimationFrame(animate)
+
 }
 
 animate()
@@ -158,7 +161,9 @@ canvas.addEventListener("click", (ev) => {
         particles.push(p);
     }
 })
+
 /*
+/!*
 
 canvas.addEventListener("mousemove", (ev) => {
     m.x = ev.x
@@ -168,4 +173,5 @@ canvas.addEventListener("mousemove", (ev) => {
     }
 })
 
+*!/
 */
