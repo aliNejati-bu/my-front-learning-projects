@@ -106,7 +106,10 @@ body {
 .btn-data {
     padding: 1.5rem 3.5rem;
     color: var(--color-text-btn-data);
+    background: white;
     margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.4rem;
 }
 
 .btn-data:hover {
@@ -184,4 +187,15 @@ body {
     .btn-data {
         padding: 1rem 2rem;
     }
+}
+
+
+.rtl{
+    direction: rtl;
+}
+
+
+.about-text{
+    color: white;
+    margin: 2rem 0;
 }

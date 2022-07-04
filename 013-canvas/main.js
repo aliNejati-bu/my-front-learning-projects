@@ -6,12 +6,10 @@ const particles = [];
 const colorsArray = ["#fff"];
 
 
-
 const ctx = canvas.getContext("2d")
 
 ctx.fillStyle = "red";
-ctx.fillRect(10,10,100,200);
-
+ctx.fillRect(10, 10, 100, 200);
 
 
 window.addEventListener("resize", function (ev) {
@@ -42,7 +40,7 @@ class Particle {
         this.velocity = new Vector2(0, 0)
         this.color = `hsl(${hue},100%,50%)`;
         this.size = Math.random() * 3 + 1;
-        this.mass = 0.01*this.size;
+        this.mass = 0.01 * this.size;
     }
 
     gravity() {
@@ -57,10 +55,13 @@ class Particle {
 
                 let d = Math.sqrt(dx * dx + dy * dy)
 
+                if (d < this.size + particles[i].i) {
+                    // position = this.size + particle.size - d
+                }
 
                 if (d > 0) {
                     let fx = 0.01 * ((m1 * m2) / (d)) * dx;
-                    let fy = 0.01 * ((m1 * m2) / (d)) * dy;
+                    let fy = 0.01 * ((m1 * m2) / ( d)) * dy;
                     particles[i].addForce(new Vector2(fx, fy))
 
                 }
