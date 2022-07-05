@@ -2,4 +2,6 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
+    background: url("../images/foroozan-faraji-R02XJ8epno4-unsplash.jpg");
+    background-size: cover;
 }
