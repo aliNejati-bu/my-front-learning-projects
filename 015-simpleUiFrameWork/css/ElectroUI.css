@@ -27,8 +27,8 @@
         transform: translateX(-2000px);
     }
 
-    80% {
-        transform: translateX(50px);
+    70% {
+        transform: translateX(60px);
     }
 
     100% {
@@ -51,8 +51,8 @@
         transform: translateX(0);
     }
 
-    20% {
-        transform: translateX(50px);
+    30% {
+        transform: translateX(60px);
     }
 
     100% {
@@ -69,6 +69,7 @@
     border-radius: 5px;
     transition: background-color 0.5s ease-in-out, box-shadow 0.3s ease-in;
     font-size: 1.2rem;
+    display: inline-block;
 }
 
 .btn--primary {
