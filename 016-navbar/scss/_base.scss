@@ -2,13 +2,23 @@
 
 $font-main: 'Montserrat', sans-serif;
 
-$color-primary: #e74c3c;
+$color-primary: #f1c40f;
 $color-sami-gray: #95a5a6;
+
+$header_height: 5rem;
+
+@mixin flexCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {

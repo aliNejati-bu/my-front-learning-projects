@@ -3,6 +3,8 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -12,6 +14,47 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   background: #95a5a6;
+}
+
+.nav {
+  position: fixed;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  background: #f1c40f;
+  justify-content: space-between;
+  height: 5rem;
+  align-items: center;
+  padding: 0 15rem;
+}
+.nav__logo-section {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.nav__toggle {
+  display: none;
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+.nav__list__item {
+  height: 100%;
+}
+.nav__list__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 0 2rem;
+  height: 5rem;
+  transition: 0.2s;
+}
+.nav__list__item a:hover {
+  background: #c29d0b;
 }
 
 /*# sourceMappingURL=main.css.map */
