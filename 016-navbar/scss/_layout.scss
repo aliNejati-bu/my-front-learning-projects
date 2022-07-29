@@ -1,18 +1,39 @@
 .nav {
-  & > .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1024px;
-    margin: 0 auto;
-  }
-
   position: sticky;
   top: 0;
   width: 100vw;
   max-width: 100%;
   background: $color-primary;
   height: $header_height;
+
+  & > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__toggle {
+    display: none;
+    width: 2.5em;
+    height: 1.8rem;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+
+    & > div {
+      width: 100%;
+      height: 0.2rem;
+      background: white;
+      transform-origin: left;
+      transition: 0.3s 0.3s;
+    }
+
+    @media screen and (max-width: 1024px) {
+      display: flex;
+    }
+
+  }
 
 
   &__logo-section {
@@ -22,8 +43,10 @@
   }
 
 
-  &__toggle {
-    display: none;
+  .nav__items-wrapper {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
   }
 
   &__list {
@@ -56,4 +79,23 @@
     }
   }
 
+}
+
+#toggle:checked {
+
+  & ~ .nav__toggle{
+    transform: rotateZ(-90deg);
+  }
+
+  & ~ .nav__toggle .nav__line2 {
+    opacity: 0;
+  }
+
+  & ~ .nav__toggle .nav__line1 {
+    transform: rotateZ(40deg);
+  }
+
+  & ~ .nav__toggle .nav__line3 {
+    transform: rotateZ(-40deg);
+  }
 }
