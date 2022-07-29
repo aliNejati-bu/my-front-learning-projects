@@ -19,7 +19,7 @@
     height: 1.8rem;
     flex-direction: column;
     justify-content: space-between;
-    transition: 0.3s;
+    transition: 0.4s cubic-bezier(.55,-0.62,.39,1.67);
     position: relative;
     z-index: 1;
 
@@ -28,7 +28,7 @@
       height: 0.2rem;
       background: white;
       transform-origin: left;
-      transition: 0.3s 0.3s;
+      transition: 0.4s 0.4s cubic-bezier(.55,-0.62,.39,1.67);
     }
 
     @media screen and (max-width: 1024px) {
