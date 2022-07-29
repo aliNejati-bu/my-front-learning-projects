@@ -41,6 +41,8 @@ p {
   flex-direction: column;
   justify-content: space-between;
   transition: 0.3s;
+  position: relative;
+  z-index: 1;
 }
 .nav__toggle > div {
   width: 100%;
@@ -61,7 +63,25 @@ p {
 }
 @media screen and (max-width: 1024px) {
   .nav .nav__items-wrapper {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background: #f1c40f;
+    top: -100%;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: 0.5s ease-out;
+  }
+  .nav .nav__items-wrapper .nav__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav .nav__items-wrapper .nav__list a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    background: transparent;
   }
 }
 .nav__list {
@@ -101,6 +121,11 @@ p {
 }
 #toggle:checked ~ .nav__toggle .nav__line3 {
   transform: rotateZ(-40deg);
+}
+@media screen and (max-width: 1024px) {
+  #toggle:checked ~ .nav__items-wrapper {
+    top: 0;
+  }
 }
 
 .container {

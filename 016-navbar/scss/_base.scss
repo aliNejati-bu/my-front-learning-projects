@@ -7,7 +7,16 @@ $color-sami-gray: #95a5a6;
 
 $header_height: 5rem;
 
-@mixin flexCenter{
+$size-font-sm-desktop: 1.8rem;
+$size-font-md-desktop: 2rem;
+$size-font-lg-desktop: 2.2rem;
+
+$size-font-sm-mobile: 1.6rem;
+$size-font-md-mobile: 1.8rem;
+$size-font-lg-mobile: 2rem;
+
+
+@mixin flexCenter {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +39,7 @@ body {
   background: $color-sami-gray;
 }
 
-p{
+p {
   text-align: justify;
 }
 

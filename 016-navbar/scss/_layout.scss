@@ -20,6 +20,8 @@
     flex-direction: column;
     justify-content: space-between;
     transition: 0.3s;
+    position: relative;
+    z-index: 1;
 
     & > div {
       width: 100%;
@@ -45,7 +47,29 @@
 
   .nav__items-wrapper {
     @media screen and (max-width: 1024px) {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      align-items: center;
+      justify-content: center;
+      background: $color-primary;
+      top: -100%;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      transition: 0.5s ease-out;
+      .nav__list {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          &:hover {
+            color: rgba(255, 255, 255, 0.8);
+            background: transparent;
+          }
+        }
+      }
+
     }
   }
 
@@ -83,7 +107,7 @@
 
 #toggle:checked {
 
-  & ~ .nav__toggle{
+  & ~ .nav__toggle {
     transform: rotateZ(-90deg);
   }
 
@@ -98,4 +122,11 @@
   & ~ .nav__toggle .nav__line3 {
     transform: rotateZ(-40deg);
   }
+
+  @media screen and (max-width: 1024px) {
+    & ~ .nav__items-wrapper {
+      top: 0;
+    }
+  }
+
 }
