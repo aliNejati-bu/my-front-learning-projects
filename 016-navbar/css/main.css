@@ -18,14 +18,18 @@ body {
 
 .nav {
   position: sticky;
+  top: 0;
   width: 100vw;
   max-width: 100%;
-  display: flex;
   background: #f1c40f;
-  justify-content: space-between;
   height: 5rem;
+}
+.nav > .container {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 15rem;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .nav__logo-section {
   color: white;

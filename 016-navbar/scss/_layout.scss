@@ -1,13 +1,19 @@
 .nav {
+  & > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
   position: sticky;
+  top: 0;
   width: 100vw;
   max-width: 100%;
-  display: flex;
   background: $color-primary;
-  justify-content: space-between;
   height: $header_height;
-  align-items: center;
-  padding: 0 15rem;
+
 
   &__logo-section {
     color: white;
@@ -16,7 +22,7 @@
   }
 
 
-  &__toggle{
+  &__toggle {
     display: none;
   }
 
@@ -35,13 +41,13 @@
         font-size: 1.8rem;
         padding: 0 2rem;
         height: $header_height;
-        transition: 0.2s  background;
+        transition: 0.2s background;
 
         &:hover {
           background: darken($color-primary, 10);
         }
 
-        &:focus{
+        &:focus {
           outline: none;
           border: 1px dashed black;
         }
