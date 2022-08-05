@@ -1,5 +1,16 @@
-*{
+$color-primary: #100720;
+
+
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background: $color-primary;
+  height: 100vh;
+  color: white;
+  font-size: 2rem;
 }

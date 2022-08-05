@@ -4,6 +4,13 @@
   padding: 0;
 }
 
+body {
+  background: #100720;
+  height: 100vh;
+  color: white;
+  font-size: 2rem;
+}
+
 .container {
   width: 100%;
   max-width: 1024px;
