@@ -1,0 +1,12 @@
+{
+  "name": "017-jquery-tic-tac-toe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss:css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
