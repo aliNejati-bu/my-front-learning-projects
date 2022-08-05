@@ -1,3 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 720px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

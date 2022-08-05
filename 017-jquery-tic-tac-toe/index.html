@@ -5,9 +5,63 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <title>tic-tac-toe</title>
 </head>
 <body>
+<nav class="nav">
+    <div class="container">
+        <div class="nav__logo">
+            Ali Tic Tac Toe Game
+        </div>
 
+        <div class="nav__toggle">
+            <div class="nav__toggle_line-1"></div>
+            <div class="nav__toggle_line-2"></div>
+            <div class="nav__toggle_line-3"></div>
+        </div>
+
+        <div class="nav__menu">
+            <ul class="nav__menu_list">
+                <li class="nav__menu_list__item">
+                    <a href="#">
+                        <i class="fa-brands fa-github"></i>Github Source
+                    </a>
+                </li>
+                <li class="nav__menu_list__item">
+                    <a href="#">
+                        <i class="fa-brands fa-internet-explorer"></i>Ali Nejati Website
+                    </a>
+                </li>
+                <li class="nav__menu_list__item">
+                    <a href="#">
+                        <i class="fa fa-address-book"></i>About
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container" id="ground">
+    <div class="game">
+        <div class="game__place" id="game11"></div>
+        <div class="game__place" id="game12"></div>
+        <div class="game__place" id="game13"></div>
+        <div class="game__place" id="game21"></div>
+        <div class="game__place" id="game22"></div>
+        <div class="game__place" id="game23"></div>
+        <div class="game__place" id="game31"></div>
+        <div class="game__place" id="game32"></div>
+        <div class="game__place" id="game33"></div>
+    </div>
+</div>
+<footer class="footer">
+    Made With <i class="fa fa-heart"></i> By <a href="#">Ali Nejati</a>
+</footer>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
