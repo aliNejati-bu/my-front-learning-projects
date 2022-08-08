@@ -1,11 +1,12 @@
 $color-primary: #100720;
 $font-roboto: 'Roboto', sans-serif;
+$color-white: #dedede;
 
 @keyframes logo-anim {
   0% {
-    text-shadow: 0 0 5px #FFF,
-    0 0 10px #FFF,
-    0 0 15px #FFF,
+    text-shadow: 0 0 5px $color-white,
+    0 0 10px $color-white,
+    0 0 15px $color-white,
     0 0 20px #49ff18,
     0 0 30px #49FF18,
     0 0 40px #49FF18,
@@ -14,9 +15,9 @@ $font-roboto: 'Roboto', sans-serif;
   }
 
   10% {
-    text-shadow: 1px 2px 5px #FFF,
-    2px 3px 10px #FFF,
-    2px 4px 15px #FFF,
+    text-shadow: 0px 0px 5px $color-white,
+    0px 0px 10px $color-white,
+    0px 0px 15px $color-white,
     3px 5px 20px #49ff18,
     3px 6px 30px #49FF18,
     4px 7px 40px #49FF18,
@@ -25,9 +26,9 @@ $font-roboto: 'Roboto', sans-serif;
   }
 
   20% {
-    text-shadow: -1px 2px 5px #FFF,
-    -2px 3px 10px #FFF,
-    -2px 4px 15px #FFF,
+    text-shadow: 0px 0px 5px $color-white,
+    0px 0px 10px $color-white,
+    0px 0px 15px $color-white,
     -3px 5px 20px #49ff18,
     -4px 6px 30px #49FF18,
     -5px 7px 40px #49FF18,
@@ -36,9 +37,9 @@ $font-roboto: 'Roboto', sans-serif;
   }
 
   25% {
-    text-shadow: 0px -2px 5px #FFF,
-    0px -3px 10px #FFF,
-    0px -4px 15px #FFF,
+    text-shadow: 0px 0px 5px $color-white,
+    0px 0px 10px $color-white,
+    0px 0px 15px $color-white,
     0px -5px 20px #49ff18,
     0px -6px 30px #49FF18,
     0px -7px 40px #49FF18,
@@ -47,9 +48,9 @@ $font-roboto: 'Roboto', sans-serif;
   }
 
   40% {
-    text-shadow: 2px -2px 5px #FFF,
-    3px -3px 10px #FFF,
-    4px -4px 15px #FFF,
+    text-shadow: 0px 0px 5px $color-white,
+    0px 0px 10px $color-white,
+    0px 0px 15px $color-white,
     5px -5px 20px #49ff18,
     7px -6px 30px #49FF18,
     8px -7px 40px #49FF18,
@@ -58,9 +59,9 @@ $font-roboto: 'Roboto', sans-serif;
   }
 
   50% {
-    text-shadow: 2px 2px 5px #FFF,
-    3px 3px 10px #FFF,
-    4px 4px 15px #FFF,
+    text-shadow: 0px 0px 5px $color-white,
+    0px 0px 10px $color-white,
+    0px 0px 15px $color-white,
     5px 5px 20px #49ff18,
     7px 6px 30px #49FF18,
     8px 7px 40px #49FF18,
@@ -69,9 +70,9 @@ $font-roboto: 'Roboto', sans-serif;
   }
 
   60% {
-    text-shadow: 2px 0px 5px #FFF,
-    3px 0px 10px #FFF,
-    4px 0px 15px #FFF,
+    text-shadow: 0px 0px 5px $color-white,
+    0px 0px 10px $color-white,
+    0px 0px 15px $color-white,
     5px 0px 20px #49ff18,
     7px 0px 30px #49FF18,
     8px 0px 40px #49FF18,
@@ -80,9 +81,9 @@ $font-roboto: 'Roboto', sans-serif;
   }
 
   70% {
-    text-shadow: -2px 0px 5px #FFF,
-    -3px 0px 10px #FFF,
-    -4px 0px 15px #FFF,
+    text-shadow: 0px 0px 5px $color-white,
+    0px 0px 10px $color-white,
+    0px 0px 15px $color-white,
     -5px 0px 20px #49ff18,
     -7px 0px 30px #49FF18,
     -8px 0px 40px #49FF18,
@@ -91,9 +92,9 @@ $font-roboto: 'Roboto', sans-serif;
   }
 
   75% {
-    text-shadow: 2px 2px 5px #FFF,
-    3px 3px 10px #FFF,
-    4px 4px 15px #FFF,
+    text-shadow: 0px 0px 5px $color-white,
+    0px 0px 10px $color-white,
+    0px 0px 15px $color-white,
     5px 5px 20px #49ff18,
     7px 6px 30px #49FF18,
     8px 7px 40px #49FF18,
@@ -102,9 +103,9 @@ $font-roboto: 'Roboto', sans-serif;
   }
 
   80% {
-    text-shadow: -2px -2px 5px #FFF,
-    -3px -3px 10px #FFF,
-    -4px -4px 15px #FFF,
+    text-shadow: 0px 0px 5px $color-white,
+    0px 0px 10px $color-white,
+    0px 0px 15px $color-white,
     -5px -5px 20px #49ff18,
     -7px -6px 30px #49FF18,
     -8px -7px 40px #49FF18,
@@ -113,9 +114,9 @@ $font-roboto: 'Roboto', sans-serif;
   }
 
   90% {
-    text-shadow: -2px 3px 5px #FFF,
-    -3px 5px 10px #FFF,
-    -4px 6px 15px #FFF,
+    text-shadow: 0px 0px 5px $color-white,
+    0px 0px 10px $color-white,
+    0px 0px 15px $color-white,
     -5px 7px 20px #49ff18,
     -7px 9px 30px #49FF18,
     -8px 10px 40px #49FF18,
@@ -124,16 +125,41 @@ $font-roboto: 'Roboto', sans-serif;
   }
 
   100% {
-    text-shadow: 2px -2px 5px #FFF,
-    3px -3px 10px #FFF,
-    4px -4px 15px #FFF,
-    5px -5px 20px #49ff18,
-    7px -6px 30px #49FF18,
-    8px -7px 40px #49FF18,
-    9px -8px 55px #49FF18,
-    11px -10px 75px #49ff18;
+    text-shadow: 0px 0px 5px $color-white,
+    0px 0px 10px $color-white,
+    0px 0px 15px $color-white,
+    0px 0px 20px #49ff18,
+    0px 0px 30px #49FF18,
+    0px 0px 40px #49FF18,
+    0px 0px 55px #49FF18,
+    0px 0px 75px #49ff18;
   }
 }
+
+@keyframes heart-anim {
+  0%{
+    transform: scale(1);
+  }
+
+  30%{
+    transform: scale(1);
+  }
+  40%{
+    transform: scale(2);
+  }
+
+  50%{
+    transform: scale(0.8);
+  }
+  60%{
+    transform: scale(2);
+  }
+  70%{
+    transform: scale(1);
+  }
+
+}
+
 
 * {
   box-sizing: border-box;
@@ -149,8 +175,9 @@ html {
 body {
   background: $color-primary;
   height: 100vh;
-  color: white;
+  color: $color-white;
   font-size: 2rem;
   font-family: $font-roboto;
   font-weight: 300;
+  overflow: hidden;
 }

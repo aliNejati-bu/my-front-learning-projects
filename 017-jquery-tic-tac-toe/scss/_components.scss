@@ -6,8 +6,11 @@
   @media screen and (max-width: 1024px) {
     width: 720px;
   }
-
-  @media screen and (max-width: 350px) {
-    padding: 0 1rem;
+  @media screen and (max-width: 720px) {
+    max-width: 490px;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding: 3rem;
   }
 }
