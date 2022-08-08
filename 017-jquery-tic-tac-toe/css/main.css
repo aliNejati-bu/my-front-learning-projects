@@ -190,6 +190,7 @@ body {
   width: 15rem;
   height: 15rem;
   border: 2px solid #dedede;
+  cursor: pointer;
 }
 @media screen and (max-height: 670px) {
   .game {
