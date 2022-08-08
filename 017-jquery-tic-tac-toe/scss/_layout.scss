@@ -1,5 +1,4 @@
 .nav {
-  font-size: 1.8rem;
   height: 6rem;
 
   .container {
@@ -24,11 +23,13 @@
       .nav__menu_list {
         display: flex;
         list-style: none;
-        width: 30vw;
+        width: 50rem;
         height: 100%;
         justify-content: space-between;
         align-items: center;
-
+        @media screen and (min-width: 1919px){
+          width: 60rem;
+        }
         .nav__menu_list__item {
           a {
             color: inherit;

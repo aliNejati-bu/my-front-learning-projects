@@ -75,6 +75,11 @@ body {
   font-weight: 300;
   overflow: hidden;
 }
+@media screen and (min-width: 1919px) {
+  body {
+    font-size: 2.2rem;
+  }
+}
 
 .container {
   width: 100%;
@@ -82,9 +87,16 @@ body {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+@media screen and (min-width: 1919px) {
+  .container {
+    width: 100%;
+    max-width: 1420px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .container {
-    width: 720px;
+    width: 100%;
+    max-width: 720px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -100,7 +112,6 @@ body {
 }
 
 .nav {
-  font-size: 1.8rem;
   height: 6rem;
 }
 .nav .container {
@@ -122,10 +133,15 @@ body {
 .nav .container .nav__menu .nav__menu_list {
   display: flex;
   list-style: none;
-  width: 30vw;
+  width: 50rem;
   height: 100%;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 1919px) {
+  .nav .container .nav__menu .nav__menu_list {
+    width: 60rem;
+  }
 }
 .nav .container .nav__menu .nav__menu_list .nav__menu_list__item a {
   color: inherit;
