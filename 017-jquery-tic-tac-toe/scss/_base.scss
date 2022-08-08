@@ -1,5 +1,5 @@
 $color-primary: #100720;
-
+$font-roboto: 'Roboto', sans-serif;
 
 
 * {
@@ -13,4 +13,6 @@ body {
   height: 100vh;
   color: white;
   font-size: 2rem;
+  font-family: $font-roboto;
+  font-weight: 300;
 }
