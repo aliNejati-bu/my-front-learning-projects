@@ -1,6 +1,8 @@
 class SoundManager {
-    constructor() {
-        this.gameClick = new Audio("asset/playBtnSound.wav");
+
+
+    playGameAction() {
+        new Audio("asset/playBtnSound.wav").play();
     }
 }
 

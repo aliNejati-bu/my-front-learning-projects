@@ -1,3 +1,7 @@
-$(".nav").on('click', function () {
-    sound.gameClick.play();
+$('document').ready(function () {
+
+    $(".nav").click(function () {
+        sound.playGameAction()
+    })
+
 });
