@@ -1,8 +1,52 @@
-.game {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.nav {
+  font-size: 1.8rem;
+  height: 6rem;
 
-  &__place {
-    height: 3rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    .nav__logo {
+      animation: logo-anim 60s infinite alternate;
+    }
+
+    .nav__menu {
+      height: 100%;
+
+      .nav__menu_list {
+        display: flex;
+        list-style: none;
+        width: 30vw;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav__menu_list__item {
+          a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            gap: 0.8rem;
+            transition: 0.5s all;
+
+            &:hover {
+              letter-spacing: 2px;
+              text-shadow: 0 0 5px #FFF,
+              0 0 10px #FFF,
+              0 0 15px #FFF,
+              0 0 20px #184aff,
+              0 0 30px #184aff,
+              0 0 40px #184aff,
+              0 0 55px #184aff,
+              0 0 75px #184aff;
+            }
+          }
+        }
+
+      }
+    }
+
   }
 }

@@ -1,8 +1,11 @@
 class SoundManager {
 
 
-    playGameAction() {
-        new Audio("asset/playBtnSound.wav").play();
+    async playGameAction() {
+        let s = new Audio("asset/playBtnSound.wav");
+        $(s).on('canplaythrough', function () {
+            s.play();
+        });
     }
 }
 
