@@ -1,11 +1,37 @@
 .nav {
   height: 6rem;
 
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    &.expanded .nav__menu {
+      top: 0;
+    }
+
+    .nav__toggle {
+      display: none;
+      height: 2rem;
+      width: 3rem;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+
+      & > div {
+        width: 100%;
+        height: 0.2rem;
+        background: $color-white;
+      }
+
+      @media screen and (max-width: 725px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
 
     .nav__logo {
       animation: logo-anim 60s infinite alternate;
@@ -20,6 +46,28 @@
     .nav__menu {
       height: 100%;
 
+      @media screen and (max-width: 725px) {
+        top: -100%;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        max-width: 100%;
+        background: #071d20;
+        left: 0;
+        transition: 0.8s cubic-bezier(1,-0.01,.24,1.03);
+
+        .nav__menu_list {
+          flex-direction: column;
+          justify-content: center !important;
+          align-items: center !important;
+          width: 100% !important;
+          gap: 3rem;
+
+
+        }
+
+      }
+
       .nav__menu_list {
         display: flex;
         list-style: none;
@@ -27,9 +75,10 @@
         height: 100%;
         justify-content: space-between;
         align-items: center;
-        @media screen and (min-width: 1919px){
+        @media screen and (min-width: 1919px) {
           width: 60rem;
         }
+
         .nav__menu_list__item {
           a {
             color: inherit;
