@@ -245,6 +245,47 @@ body {
   height: 15rem;
   border: 2px solid #dedede;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game .game__place.preBlue::before {
+  font-family: sans-serif;
+  font-size: 8rem;
+  display: block;
+  content: "x";
+}
+@media screen and (max-width: 500px) {
+  .game .game__place.preBlue::before {
+    font-size: 4rem;
+  }
+}
+.game .game__place.preRed::before {
+  font-family: sans-serif;
+  font-size: 8rem;
+  display: block;
+  content: "o";
+}
+@media screen and (max-width: 500px) {
+  .game .game__place.preRed::before {
+    font-size: 4rem;
+  }
+}
+.game .game__place_content {
+  font-family: sans-serif;
+  font-size: 8rem;
+  display: block;
+}
+@media screen and (max-width: 500px) {
+  .game .game__place_content {
+    font-size: 4rem;
+  }
+}
+.game .game__place_content.active.blue {
+  text-shadow: #dedede 0px 0px 5px, #dedede 0px 0px 10px, #dedede 0px 0px 15px, #0066CC 0px 0px 20px, #0066CC 0px 0px 30px, #0066CC 0px 0px 40px, #0066CC 0px 0px 50px, #0066CC 0px 0px 75px;
+}
+.game .game__place_content.active.red {
+  text-shadow: #dedede 0px 0px 5px, #dedede 0px 0px 10px, #dedede 0px 0px 15px, #E6004C 0px 0px 20px, #E6004C 0px 0px 30px, #E6004C 0px 0px 40px, #E6004C 0px 0px 50px, #E6004C 0px 0px 75px;
 }
 @media screen and (max-height: 670px) {
   .game {
