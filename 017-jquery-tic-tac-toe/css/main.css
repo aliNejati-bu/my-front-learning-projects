@@ -252,6 +252,7 @@ body {
 .game .game__place.preBlue::before {
   font-family: sans-serif;
   font-size: 8rem;
+  opacity: 0.5;
   display: block;
   content: "x";
 }
@@ -263,6 +264,7 @@ body {
 .game .game__place.preRed::before {
   font-family: sans-serif;
   font-size: 8rem;
+  opacity: 0.5;
   display: block;
   content: "o";
 }
