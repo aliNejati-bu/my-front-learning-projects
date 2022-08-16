@@ -18,21 +18,39 @@ class Game {
 
 
     playAGame(row, col) {
-        if (this.gameStatus[row][col] === 0 || this.endGameStatus !== "") {
-
+        if (this.gameStatus[row][col] !== 0 || this.endGameStatus !== "") {
             return false;
         }
 
+        let winChecker;
         if (this.status === "blue") {
             this.status = "red";
             this.gameStatus[row][col] = 1;
+
+
+            winChecker = this.endGameCheck(1);
+            if (winChecker !== false) {
+                this.endGameStatus = "blue";
+                winChecker.winner = 1;
+            }
+
         } else {
             this.status = "blue";
             this.gameStatus[row][col] = 2;
+
+
+            winChecker = this.endGameCheck(2);
+            if (winChecker !== false) {
+                this.endGameStatus = "red";
+                winChecker.winner = 2;
+            }
         }
 
-        this.gamePlayCb.apply(this, this.gameStatus);
+        this.gamePlayCb.apply(this, [this.gameStatus]);
 
+        if (winChecker !== false) {
+            this.endGameCb.apply(this, [winChecker])
+        }
 
         return true;
     }
@@ -135,9 +153,10 @@ class Game {
                 ]
             };
         }
+
+        return false;
     }
 
 
 }
 
-let game = new Game();
