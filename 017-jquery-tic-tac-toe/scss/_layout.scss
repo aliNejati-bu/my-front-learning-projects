@@ -220,6 +220,11 @@
 
     }
 
+    &_content.active{
+      transition: 0.3s text-shadow;
+    }
+
+
     &_content.active.blue {
       text-shadow: $color-white 0px 0px 5px,
       $color-white 0px 0px 10px,
@@ -240,6 +245,40 @@
       #E6004C 0px 0px 40px,
       #E6004C 0px 0px 50px,
       #E6004C 0px 0px 75px;
+    }
+
+    &.win {
+      .blue {
+        text-shadow: $color-white 0px 0px 5px,
+        $color-white 0px 0px 10px,
+        $color-white 0px 0px 15px,
+        $color-white 0px 0px 20px,
+        $color-white 0px 0px 30px,
+        $color-white 0px 0px 40px,
+        #2372c9 0px 0px 50px,
+        #2372c9 0px 0px 60px,
+        #2372c9 0px 0px 75px,
+        #2372c9 0px 0px 90px,
+        #2372c9 0px 0px 110px,
+        #2372c9 0px 0px 130px,
+        #2372c9 0px 0px 150px;
+      }
+
+      .red {
+        text-shadow: $color-white 0px 0px 5px,
+        $color-white 0px 0px 10px,
+        $color-white 0px 0px 15px,
+        $color-white 0px 0px 20px,
+        $color-white 0px 0px 30px,
+        $color-white 0px 0px 40px,
+        #d34473 0px 0px 50px,
+        #d34473 0px 0px 60px,
+        #d34473 0px 0px 75px,
+        #d34473 0px 0px 90px,
+        #d34473 0px 0px 110px,
+        #d34473 0px 0px 130px,
+        #d34473 0px 0px 150px;
+      }
     }
   }
 

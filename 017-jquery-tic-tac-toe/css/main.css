@@ -283,11 +283,20 @@ body {
     font-size: 4rem;
   }
 }
+.game .game__place_content.active {
+  transition: 0.3s text-shadow;
+}
 .game .game__place_content.active.blue {
   text-shadow: #dedede 0px 0px 5px, #dedede 0px 0px 10px, #dedede 0px 0px 15px, #0066CC 0px 0px 20px, #0066CC 0px 0px 30px, #0066CC 0px 0px 40px, #0066CC 0px 0px 50px, #0066CC 0px 0px 75px;
 }
 .game .game__place_content.active.red {
   text-shadow: #dedede 0px 0px 5px, #dedede 0px 0px 10px, #dedede 0px 0px 15px, #E6004C 0px 0px 20px, #E6004C 0px 0px 30px, #E6004C 0px 0px 40px, #E6004C 0px 0px 50px, #E6004C 0px 0px 75px;
+}
+.game .game__place.win .blue {
+  text-shadow: #dedede 0px 0px 5px, #dedede 0px 0px 10px, #dedede 0px 0px 15px, #dedede 0px 0px 20px, #dedede 0px 0px 30px, #dedede 0px 0px 40px, #2372c9 0px 0px 50px, #2372c9 0px 0px 60px, #2372c9 0px 0px 75px, #2372c9 0px 0px 90px, #2372c9 0px 0px 110px, #2372c9 0px 0px 130px, #2372c9 0px 0px 150px;
+}
+.game .game__place.win .red {
+  text-shadow: #dedede 0px 0px 5px, #dedede 0px 0px 10px, #dedede 0px 0px 15px, #dedede 0px 0px 20px, #dedede 0px 0px 30px, #dedede 0px 0px 40px, #d34473 0px 0px 50px, #d34473 0px 0px 60px, #d34473 0px 0px 75px, #d34473 0px 0px 90px, #d34473 0px 0px 110px, #d34473 0px 0px 130px, #d34473 0px 0px 150px;
 }
 @media screen and (max-height: 670px) {
   .game {
